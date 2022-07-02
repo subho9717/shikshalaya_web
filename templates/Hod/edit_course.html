@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+ <div class="content container-fluid">
+               <div class="page-header">
+                  <div class="row align-items-center">
+                     <div class="col">
+                        <h3 class="page-title">Edit Cources</h3>
+
+                     </div>
+                  </div>
+               </div>
+                  {% include 'includes/messages.html' %}
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="card">
+                        <div class="card-body">
+                           <form method="post" action="{% url 'update_course' %}" >
+                              {% csrf_token %}
+                              {% for i in course %}
+
+                              <div class="row">
+                                 <div class="col-12">
+                                    <h5 class="form-title"><span>Cources Information</span></h5>
+                                 </div>
+
+                                 <input type="text" class="form-control" name="course_id"  value="{{i.id}}" hidden>
+
+
+                                 <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                       <label>Course Name</label>
+                                       <input type="text" class="form-control" name="course_name"  value="{{i.name}}">
+                                    </div>
+                                 </div>
+
+                                 <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                 </div>
+                              </div>
+                              {% endfor %}
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+{% endblock %}
