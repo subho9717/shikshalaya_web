@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-=xxxazd+0k6vtwj(zoi9u#q89m_80@@kuixah+3o9j&ml16y-x
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'shikshalayaweb.herokuapp.com'
+    'shikshalayaweb.herokuapp.com','*'
 ]
 
 # Application definition
