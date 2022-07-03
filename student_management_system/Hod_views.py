@@ -91,7 +91,7 @@ def ADD_STUDENT(request):
     }
     return render(request,'Hod/add_student.html',context)
 
-
+@login_required(login_url='/')
 def VIEW_STUDENT(request):
     student  = Student.objects.all()
     context = {
@@ -99,7 +99,7 @@ def VIEW_STUDENT(request):
     }
     return render(request,'Hod/view_student.html',context)
 
-
+@login_required(login_url='/')
 def Edit_STUDENT(request,id):
     student  = Student.objects.filter(id=id)
     course = Course.objects.all()
@@ -109,7 +109,7 @@ def Edit_STUDENT(request,id):
     }
     return render(request,'Hod/edit_student.html',context)
 
-
+@login_required(login_url='/')
 def UPDATE_STUDENT(request):
     if request.method == 'POST':
         profile_pic = request.FILES.get('profile_pic')
@@ -178,13 +178,15 @@ def UPDATE_STUDENT(request):
         return redirect('view_student')
     return render(request,'Hod/edit_student.html')
 
-
+@login_required(login_url='/')
 def DELETE_STUDENT(request,admin):
     student = CustomUser.objects.get(id= admin)
     student.delete()
     messages.success(request, 'Record Deleted Successfully')
     return redirect('view_student')
 
+
+@login_required(login_url='/')
 def Detail_STUDENT(request,id):
     print(id)
     student = Student.objects.filter(id=id)
@@ -196,7 +198,7 @@ def Detail_STUDENT(request,id):
     return render(request,'Hod/detail_student.html',context)
 
 
-
+@login_required(login_url='/')
 def ADD_COURSE(request):
     if request.method == 'POST':
         course_name = request.POST.get('course_name')
@@ -208,7 +210,7 @@ def ADD_COURSE(request):
         return redirect('add_course')
     return render(request,'Hod/add_course.html')
 
-
+@login_required(login_url='/')
 def VIEW_COURSE(request):
     course = Course.objects.all()
     context = {
@@ -216,7 +218,7 @@ def VIEW_COURSE(request):
     }
     return render(request,'Hod/view_course.html',context)
 
-
+@login_required(login_url='/')
 def Edit_COURCES(request,id):
     course = Course.objects.filter(id=id)
     context = {
@@ -225,7 +227,7 @@ def Edit_COURCES(request,id):
     }
     return render(request,'Hod/edit_course.html',context)
 
-
+@login_required(login_url='/')
 def UPDATE_COURCES(request):
     if request.method == 'POST':
         course_id = request.POST.get('course_id')
@@ -238,14 +240,14 @@ def UPDATE_COURCES(request):
         return redirect('view_course')
     return render(request,'Hod/edit_course.html')
 
-
+@login_required(login_url='/')
 def DELETE_COURCES(request,id):
     course = Course.objects.get(id=id)
     course.delete()
     messages.success(request, 'Record Deleted Successfully')
     return redirect('view_course')
 
-
+@login_required(login_url='/')
 def FEES_STUDENT(request,id):
     student = Student.objects.filter(id=id)
     course = Course.objects.all()
@@ -256,7 +258,7 @@ def FEES_STUDENT(request,id):
 
     return render(request,'Hod/fees_student.html', context)
 
-
+@login_required(login_url='/')
 def FEES_ADD_STUDENT(request):
     if request.method == 'POST':
         student_id = request.POST.get('student_id')
@@ -287,7 +289,7 @@ def FEES_ADD_STUDENT(request):
         return redirect('fees_add_view_student')
     return render(request,'Hod/fees_view_student.html')
 
-
+@login_required(login_url='/')
 def FEES_ADD__VIEW_STUDENT(request):
     monthly_Fees = Student_monthly_Fees.objects.all()
     context={
@@ -295,6 +297,6 @@ def FEES_ADD__VIEW_STUDENT(request):
     }
     return render(request,'Hod/fees_view_student.html',context)
 
-
+@login_required(login_url='/')
 def FEES_RECEIPT_STUDENT(request):
     return render(request,'Hod/fees_receipt.html')
