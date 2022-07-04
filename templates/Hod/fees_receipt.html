@@ -3,6 +3,8 @@
 <html>
 <head>
 	<title>Invoice Template Design</title>
+	<link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/fontawesome.min.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/all.min.css' %}">
 	<style type="text/css">
 		@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap');
 
@@ -190,9 +192,13 @@ body{
 <body>
 
 <div class="wrapper">
+
 	<div class="invoice_wrapper">
+
 		<div class="header">
+
 			<div class="logo_invoice_wrap">
+
 				<div class="logo_sec">
 					<img src="{% static 'assets/img/logo.png' %}" alt="code logo">
 					<div class="title_wrap">
@@ -200,31 +206,28 @@ body{
 						<!-- <p class="sub_title">Privite Limited</p> -->
 					</div>
 				</div>
+
 				<div class="invoice_sec">
 					<p class="invoice bold">Fee Receipt</p>
 					<p class="invoice_no">
 						<span class="bold">Receipt id</span>
-						<span>#3488</span>
+						<span>{% for i in monthly_Fees %}#{{i.id}}{% endfor %}</span>
 					</p>
 					<p class="date">
 						<span class="bold">Date</span>
-						<span>08/Jan/2022</span>
+						<span>{% for i in monthly_Fees %}{{i.created_at}}{% endfor %}</span>
 					</p>
 				</div>
 			</div>
 			<div class="bill_total_wrap">
 				<div class="bill_sec">
-					<p>Bill To</p> 
-	          		<p class="bold name">Alex Deo</p>
-			        <span>
-			           123 walls street, Townhall<br/>
-			           +111 222345667
-			        </span>
+					<p>Bill To</p>
+	          		<p class="bold name">{% for i in monthly_Fees %}{{i.first_name}}&nbsp;{{i.last_name}}{% endfor %}</p>
 				</div>
-				<div class="total_wrap">
-					<p>Total Due</p>
-	          		<p class="bold price">USD: $1200</p>
-				</div>
+<!--				<div class="total_wrap">-->
+<!--					<p>Total Due</p>-->
+<!--	          		<p class="bold price"><i class="fas fa-rupee-sign"></i>{% for i in monthly_Fees %}{{i.month_fees}}{% endfor %}</p>-->
+<!--				</div>-->
 			</div>
 		</div>
 		<div class="body">
@@ -232,9 +235,7 @@ body{
 				<div class="table_header">
 					<div class="row">
 						<div class="col col_no">NO.</div>
-						<div class="col col_des">ITEM DESCRIPTION</div>
-						<div class="col col_price">PRICE</div>
-						<div class="col col_qty">QTY</div>
+						<div class="col col_des">Course</div>
 						<div class="col col_total">TOTAL</div>
 					</div>
 				</div>
@@ -244,89 +245,11 @@ body{
 							<p>01</p>
 						</div>
 						<div class="col col_des">
-							<p class="bold">Web Design</p>
-							<p>Lorem ipsum dolor sit.</p>
+							<p class="bold">{% for i in monthly_Fees %}{{i.course}}{% endfor %}</p>
 						</div>
-						<div class="col col_price">
-							<p>$350</p>
-						</div>
-						<div class="col col_qty">
-							<p>2</p>
-						</div>
+
 						<div class="col col_total">
-							<p>$700.00</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col col_no">
-							<p>02</p>
-						</div>
-						<div class="col col_des">
-							<p class="bold">Web Development</p>
-							<p>Lorem ipsum dolor sit.</p>
-						</div>
-						<div class="col col_price">
-							<p>$350</p>
-						</div>
-						<div class="col col_qty">
-							<p>2</p>
-						</div>
-						<div class="col col_total">
-							<p>$700.00</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col col_no">
-							<p>03</p>
-						</div>
-						<div class="col col_des">
-							<p class="bold">GitHub</p>
-							<p>Lorem ipsum dolor sit.</p>
-						</div>
-						<div class="col col_price">
-							<p>$120</p>
-						</div>
-						<div class="col col_qty">
-							<p>1</p>
-						</div>
-						<div class="col col_total">
-							<p>$700.00</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col col_no">
-							<p>04</p>
-						</div>
-						<div class="col col_des">
-							<p class="bold">Backend Design</p>
-							<p>Lorem ipsum dolor sit.</p>
-						</div>
-						<div class="col col_price">
-							<p>$350</p>
-						</div>
-						<div class="col col_qty">
-							<p>2</p>
-						</div>
-						<div class="col col_total">
-							<p>$700.00</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col col_no">
-							<p>05</p>
-						</div>
-						<div class="col col_des">
-							<p class="bold">Backend Development</p>
-							<p>Lorem ipsum dolor sit.</p>
-						</div>
-						<div class="col col_price">
-							<p>$150</p>
-						</div>
-						<div class="col col_qty">
-							<p>1</p>
-						</div>
-						<div class="col col_total">
-							<p>$700.00</p>
+							<p>{% for i in monthly_Fees %}{{i.month_fees}}{% endfor %}</p>
 						</div>
 					</div>
 				</div>
@@ -356,6 +279,7 @@ body{
 				</div>
 			</div>
 		</div>
+
 		<div class="footer">
 			<p>Thank you and Best Wishes</p>
 			<div class="terms">
@@ -364,6 +288,7 @@ body{
 		    </div>
 		</div>
 	</div>
+
 </div>
 
 

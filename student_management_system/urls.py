@@ -42,7 +42,7 @@ urlpatterns = [
     path('Hod/Student/Fees/<str:id>',Hod_views.FEES_STUDENT,name='fees_student'),
     path('Hod/Student/Fees_Add',Hod_views.FEES_ADD_STUDENT,name='fees_add_student'),
     path('Hod/Student/Fees_Add/View',Hod_views.FEES_ADD__VIEW_STUDENT,name='fees_add_view_student'),
-    path('Hod/Student/Fees_Receipt',Hod_views.FEES_RECEIPT_STUDENT,name='fees_receipt_student'),
+    path('Hod/Student/Fees_Receipt/<str:id>',Hod_views.FEES_RECEIPT_STUDENT,name='fees_receipt_student'),
 
     path('Hod/Course/Add',Hod_views.ADD_COURSE,name='add_course'),
     path('Hod/Course/View',Hod_views.VIEW_COURSE,name='view_course'),

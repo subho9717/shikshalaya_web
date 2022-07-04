@@ -292,11 +292,16 @@ def FEES_ADD_STUDENT(request):
 @login_required(login_url='/')
 def FEES_ADD__VIEW_STUDENT(request):
     monthly_Fees = Student_monthly_Fees.objects.all()
+    # print(monthly_Fees.)
     context={
         'monthly_Fees':monthly_Fees
     }
     return render(request,'Hod/fees_view_student.html',context)
 
 @login_required(login_url='/')
-def FEES_RECEIPT_STUDENT(request):
-    return render(request,'Hod/fees_receipt.html')
+def FEES_RECEIPT_STUDENT(request,id):
+    monthly_Fees = Student_monthly_Fees.objects.filter(id=id)
+    context = {
+        'monthly_Fees': monthly_Fees
+    }
+    return render(request,'Hod/fees_receipt.html',context)
