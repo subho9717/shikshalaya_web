@@ -10,3 +10,7 @@ admin.site.register(Course)
 admin.site.register(Student)
 admin.site.register(Student_monthly_Fees)
 
+admin.site.register(Computer_Course)
+admin.site.register(Computer_Student)
+admin.site.register(Computer_Student_monthly_Fees)
+

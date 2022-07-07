@@ -11,11 +11,33 @@
                 <a href="{% url 'hod_home' %}"><i class="fas fa-user-graduate"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
              </li>
              <li class="submenu">
-                <a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
+                <a href="#"><i class="fas fa-user-graduate"></i> <span>Coaching Students</span> <span class="menu-arrow"></span></a>
                 <ul>
                    <li><a href="{% url 'view_student' %}">Student View</a></li>
                    <li><a href="{% url 'add_student' %}">Student Add</a></li>
-<!--                  <li><a href="{% url 'fees_add_view_student' %}">Student Fees & Receipt</a></li>-->
+                  <li><a href="{% url 'fees_add_view_student' %}">Student Fees & Receipt</a></li>
+                    <li class="submenu">
+                        <a href="#"><i class="fas fa-building"></i> <span> Course</span> <span class="menu-arrow"></span></a>
+                        <ul>
+                           <li><a href="{% url 'view_course' %}">Course View</a></li>
+                           <li><a href="{% url 'add_course' %}">Course Add</a></li>
+                        </ul>
+                    </li>
+                </ul>
+             </li>
+              <li class="submenu">
+                <a href="#"><i class="fas fa-user-graduate"></i> <span>Computer Students</span> <span class="menu-arrow"></span></a>
+                <ul>
+                   <li><a href="{% url 'view_computer_student' %}">Student View</a></li>
+                   <li><a href="{% url 'add_computer_student' %}">Student Add</a></li>
+                  <li><a href="#">Student Fees & Receipt</a></li>
+                    <li class="submenu">
+                        <a href="#"><i class="fas fa-building"></i> <span> Course</span> <span class="menu-arrow"></span></a>
+                        <ul>
+                            <li><a href="{% url 'view_computer_course' %}">Course View</a></li>
+                           <li><a href="{% url 'add_computer_course' %}">Course Add</a></li>
+                        </ul>
+                     </li>
                 </ul>
              </li>
              <li class="submenu">
@@ -29,9 +51,10 @@
              <li class="submenu">
                 <a href="#"><i class="fas fa-building"></i> <span> Course</span> <span class="menu-arrow"></span></a>
                 <ul>
-                   <li><a href="{% url 'view_course' %}">Course View</a></li>
-                   <li><a href="{% url 'add_course' %}">Course Add</a></li>
-
+                   <li><a href="{% url 'view_course' %}">Coaching Course View</a></li>
+                   <li><a href="{% url 'add_course' %}">Coaching Course Add</a></li>
+                    <li><a href="{% url 'view_computer_course' %}">Computer Course View</a></li>
+                   <li><a href="{% url 'add_computer_course' %}">Computer Course Add</a></li>
                 </ul>
              </li>
              <li class="submenu">
@@ -55,7 +78,8 @@
                      <li class="submenu">
                         <a href="#"><i class="fas fa-file-invoice-dollar"></i> <span> Accounts</span> <span class="menu-arrow"></span></a>
                         <ul>
-                           <li><a href="{% url 'fees_add_view_student' %}">Fees Collection</a></li>
+                           <li><a href="{% url 'fees_add_view_student' %}">Coaching Fees Collection</a></li>
+                            <li><a href="#">Computer Fees Collection</a></li>
                            <li><a href="expenses.html">Expenses</a></li>
                            <li><a href="salary.html">Salary</a></li>
                            <li><a href="add-fees-collection.html">Add Fees</a></li>

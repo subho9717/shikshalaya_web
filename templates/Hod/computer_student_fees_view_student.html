@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="content container-fluid">
+               <div class="page-header">
+                  <div class="row align-items-center">
+                     <div class="col">
+                        <h3 class="page-title">Students</h3>
+                        <ul class="breadcrumb">
+                           <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                           <li class="breadcrumb-item active">Students</li>
+                        </ul>
+                     </div>
+                    {% if messages %}
+           {% for message in messages %}
+              {% if  message.tags == 'error' %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <strong> {{message}}</strong>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              {% endif  %}
+           {% endfor %}
+        {% endif  %}
+{% if messages %}
+           {% for message in messages %}
+              {% if  message.tags == 'success' %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong> {{message}}</strong>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              {% endif  %}
+           {% endfor %}
+        {% endif  %}
+{% if messages %}
+           {% for message in messages %}
+              {% if  message.tags == 'warning' %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong> {{message}}</strong>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              {% endif  %}
+           {% endfor %}
+        {% endif  %}
+{% if messages %}
+           {% for message in messages %}
+              {% if  message.tags == 'warning' %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong> {{message}}</strong>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              {% endif  %}
+           {% endfor %}
+        {% endif  %}
+                     <div class="col-auto text-right float-right ml-auto">
+                        <a href="#" class="btn btn-outline-primary mr-2"><i class="fas fa-download"></i> Download</a>
+                        <a href="add-student.html" class="btn btn-primary"><i class="fas fa-plus"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="card card-table">
+                        <div class="card-body">
+                           <div class="table-responsive">
+                              <table  id="table_id" class="table table-hover table-center mb-0 ">
+                                 <thead>
+                                    <tr>
+                                       <th>ID</th>
+                                       <th>STUDENT ID</th>
+                                       <th>Name</th>
+                                       <th>Email</th>
+                                        <th>COURSE</th>
+                                       <th>COURSE FEES</th>
+                                       <th>MONTH</th>
+                                       <th>MONTH FEES</th>
+                                       <th>Created at</th>
+                                       <th>Updates at</th>
+
+                                       <th class="text-right">Action</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                 {% for i in monthly_Fees %}
+                                    <tr>
+                                       <td>{{i.id}}</td>
+                                       <td>{{i.Student_id}}</td>
+
+                                       <td>
+                                          <h2 class="table-avatar">
+
+                                             <a href="{% url 'detail_student' i.id %}">{{i.first_name}}&nbsp;{{i.last_name}}</a>
+                                          </h2>
+                                       </td>
+                                       <td>{{i.email}}</td>
+                                       <td>{{i.course}}</td>
+                                       <td>{{i.course_fees}}</td>
+                                       <td>{{i.month}}</td>
+                                       <td>{{i.month_fees}}</td>
+                                       <td>{{i.created_at}}</td>
+                                       <td>{{i.updated_at}}</td>
+
+                                       <td class="text-right">
+                                          <div class="actions">
+                                             <a href="{% url 'fees_receipt_student'  i.id  %}" class="btn btn-sm bg-success-light mr-2">
+                                             <i class="fa fa-print"></i>">
+                                             </a>
+<!--                                             <a href="#" class="btn btn-sm bg-danger-light">-->
+<!--                                             <i class="fas fa-trash"></i>-->
+<!--                                             </a>-->
+
+                                          </div>
+                                       </td>
+                                    </tr>
+                                 {% endfor %}
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+{% endblock %}

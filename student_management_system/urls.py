@@ -50,4 +50,24 @@ urlpatterns = [
     path('Hod/Course/Update',Hod_views.UPDATE_COURCES,name='update_course'),
     path('Hod/Course/Delete/<str:id>',Hod_views.DELETE_COURCES,name='delete_course'),
 
+
+    path('Hod/Computer/Student/Add',Hod_views.ADD_COMPUTER_STUDENT,name='add_computer_student'),
+    path('Hod/Computer/Student/View',Hod_views.VIEW_COMPUTER_STUDENT,name='view_computer_student'),
+    path('Hod/Computer/Student/Edit/<str:id>',Hod_views.Edit_COMPUTER_STUDENT,name='edit_computer_student'),
+    path('Hod/Computer/Student/Update',Hod_views.UPDATE_COMPUTER_STUDENT,name='update_computer_student'),
+    path('Hod/Computer/Student/Delete/<str:admin>',Hod_views.DELETE_COMPUTER_STUDENT,name='delete_computer_student'),
+    path('Hod/Computer/Student/Detail/<str:id>',Hod_views.Detail_COMPUTER_STUDENT,name='detail_computer_student'),
+    path('Hod/Computer/Student/Fees/<str:id>',Hod_views.FEES_COMPUTER_STUDENT,name='fees_computer_student'),
+    path('Hod/Computer/Student/Fees_Add',Hod_views.FEES_ADD_COMPUTER_STUDENT,name='fees_add_computer_student'),
+    path('Hod/Computer/Student/Fees_Add/View',Hod_views.FEES_ADD__VIEW_COMPUTER_STUDENT,name='fees_add_view_computer_student'),
+    # path('Hod/Computer/Student/Fees_Receipt/<str:id>',Hod_views.FEES_RECEIPT_COMPUTER_STUDENT,name='fees_receipt_computer_student'),
+
+    path('Hod/Computer/Course/Add',Hod_views.ADD_COMPUTER_COURSE,name='add_computer_course'),
+    path('Hod/Computer/Course/View', Hod_views.VIEW_COMPUTER_COURSE, name='view_computer_course'),
+    path('Hod/Computer/Course/Edit/<str:id>',Hod_views.Edit_COMPUTER_COURCES,name='edit_computer_course'),
+    path('Hod/Computer/Course/Update',Hod_views.UPDATE_COMPUTER_COURCES,name='update_computer_course'),
+    path('Hod/Computer/Course/Delete/<str:id>',Hod_views.DELETE_COMPUTER_COURCES,name='delete_computer_course'),
+
+
+
 ] + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

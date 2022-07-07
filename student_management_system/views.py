@@ -5,13 +5,15 @@ from django.contrib  import messages
 from django.contrib.auth.decorators import login_required
 from shikshalaya_computer_app.models import CustomUser
 #
+@login_required(login_url='/')
 def BASE(request):
     return render(request,'base.html')
 #
-#
+
 def LOGIN(request):
     return render(request, 'login.html')
-#
+
+
 def doLogin(request):
     if request.method == 'POST':
         user = EmailBackEnd.authenticate(request,username = request.POST.get('email'),password = request.POST.get('password'))
@@ -32,10 +34,11 @@ def doLogin(request):
             messages.error(request, 'Email and Password are Invalid')
             return redirect('login')
 
-
+@login_required(login_url='/')
 def doLogout(request):
     logout(request)
     return redirect('login')
+
 
 @login_required(login_url='/')
 def PROFILE(request):
