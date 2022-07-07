@@ -105,8 +105,8 @@
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Gender</label>
-                                       <select class="form-control" name="gender" required>
-                                          <option>Select Gender</option>
+                                       <select class="form-control" name="gender" required="true">
+                                          <option value="">Select Gender</option>
                                           <option>Female</option>
                                           <option>Male</option>
                                           <option>Others</option>
@@ -124,8 +124,8 @@
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Class</label>
-                                       <select class="form-control" name="Class" required>
-                                          <option>Select Class</option>
+                                       <select class="form-control" name="Class" required="true">
+                                          <option value="">Select Class</option>
                                           <option>Female</option>
                                           <option>Male</option>
                                           <option>Others</option>
@@ -220,8 +220,8 @@
                                   <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Course</label>
-                                       <select class="form-control" name="course_id" required>
-                                          <option >Select Course</option>
+                                       <select class="form-control" name="course_id" required="true">
+                                          <option value="">Select Course</option>
 
                                           {% for i in course %}
                                           <option value = "{{i.id}}">{{i.name}}</option>
