@@ -321,7 +321,7 @@ def ADD_COMPUTER_COURSE(request):
         return redirect('add_computer_course')
     return render(request,'Hod/computer_course_add.html')
 
-
+@login_required(login_url='/')
 def VIEW_COMPUTER_COURSE(request):
     course = Computer_Course.objects.all()
     context = {
@@ -329,7 +329,7 @@ def VIEW_COMPUTER_COURSE(request):
     }
     return render(request,'Hod/computer_course_view.html', context)
 
-
+@login_required(login_url='/')
 def UPDATE_COMPUTER_COURCES(request):
     if request.method == 'POST':
         course_id = request.POST.get('course_id')
@@ -342,14 +342,14 @@ def UPDATE_COMPUTER_COURCES(request):
         return redirect('view_computer_course')
     return render(request, 'Hod/computer_course_edit.html')
 
-
+@login_required(login_url='/')
 def DELETE_COMPUTER_COURCES(request,id):
     course = Computer_Course.objects.get(id=id)
     course.delete()
     messages.success(request, 'Record Deleted Successfully')
     return redirect('view_computer_course')
 
-
+@login_required(login_url='/')
 def Edit_COMPUTER_COURCES(request,id):
     course = Computer_Course.objects.filter(id=id)
     context = {
@@ -357,7 +357,7 @@ def Edit_COMPUTER_COURCES(request,id):
     }
     return render(request, 'Hod/computer_course_edit.html', context)
 
-
+@login_required(login_url='/')
 def ADD_COMPUTER_STUDENT(request):
     course = Computer_Course.objects.all()
     # session_year = Session_Year.objects.all()
@@ -439,7 +439,7 @@ def ADD_COMPUTER_STUDENT(request):
     }
     return render(request, 'Hod/computer_student_add.html', context)
 
-
+@login_required(login_url='/')
 def VIEW_COMPUTER_STUDENT(request):
     student = Computer_Student.objects.all()
     context = {
@@ -447,7 +447,7 @@ def VIEW_COMPUTER_STUDENT(request):
     }
     return render(request, 'Hod/computer_student_view.html', context)
 
-
+@login_required(login_url='/')
 def Edit_COMPUTER_STUDENT(request,id):
     student = Computer_Student.objects.filter(id=id)
     course = Computer_Course.objects.all()
@@ -457,7 +457,7 @@ def Edit_COMPUTER_STUDENT(request,id):
     }
     return render(request, 'Hod/computer_student_edit.html', context)
 
-
+@login_required(login_url='/')
 def UPDATE_COMPUTER_STUDENT(request):
     if request.method == 'POST':
         profile_pic = request.FILES.get('profile_pic')
@@ -524,14 +524,14 @@ def UPDATE_COMPUTER_STUDENT(request):
         return redirect('view_computer_student')
     return render(request, 'Hod/computer_student_edit.html')
 
-
+@login_required(login_url='/')
 def DELETE_COMPUTER_STUDENT(request,admin):
     student = CustomUser.objects.get(id=admin)
     student.delete()
     messages.success(request, 'Record Deleted Successfully')
     return redirect('view_computer_student')
 
-
+@login_required(login_url='/')
 def Detail_COMPUTER_STUDENT(request,id):
     print(id)
     student = Computer_Student.objects.filter(id=id)
@@ -542,7 +542,7 @@ def Detail_COMPUTER_STUDENT(request,id):
     }
     return render(request, 'Hod/computer_student_detail.html', context)
 
-
+@login_required(login_url='/')
 def FEES_COMPUTER_STUDENT(request,id):
     student = Computer_Student.objects.filter(id=id)
     course = Computer_Course.objects.all()
@@ -553,7 +553,7 @@ def FEES_COMPUTER_STUDENT(request,id):
 
     return render(request, 'Hod/computer_student_fees.html', context)
 
-
+@login_required(login_url='/')
 def FEES_ADD_COMPUTER_STUDENT(request):
     if request.method == 'POST':
         student_id = request.POST.get('student_id')
@@ -581,7 +581,7 @@ def FEES_ADD_COMPUTER_STUDENT(request):
         return redirect('fees_add_view_computer_student')
     return render(request, 'Hod/computer_student_fees_view_student.html.html')
 
-
+@login_required(login_url='/')
 def FEES_ADD__VIEW_COMPUTER_STUDENT(request):
     monthly_Fees = Computer_Student_monthly_Fees.objects.all()
     # print(monthly_Fees.)
@@ -590,7 +590,7 @@ def FEES_ADD__VIEW_COMPUTER_STUDENT(request):
     }
     return render(request, 'Hod/computer_student_fees_view_student.html', context)
 
-
+@login_required(login_url='/')
 def FEES_RECEIPT_COMPUTER_STUDENT(request,id):
     monthly_Fees = Computer_Student_monthly_Fees.objects.filter(id=id)
     context = {
