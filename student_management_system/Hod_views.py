@@ -36,7 +36,7 @@ def ADD_STUDENT(request):
         session_start = request.POST.get('session_start')
         session_end = request.POST.get('session_end')
         course_fees = request.POST.get('course_fees')
-        # print(profile_pic,first_name,last_name,email,username,password,gender,date_of_birth,Class,joining_date,mobile_number,admission_number,father_name,father_occupation,father_mobile_number,mother_name,mother_mobile_number,mother_occupation,present_address,permenent_address,course_id,course,session_start,session_end,course_fees)
+        print(profile_pic,first_name,last_name,email,username,password,gender,date_of_birth,Class,joining_date,mobile_number,admission_number,father_name,father_occupation,father_mobile_number,mother_name,mother_mobile_number,mother_occupation,present_address,permenent_address,course_id,course,session_start,session_end,course_fees)
 
         if CustomUser.objects.filter(email=email).exists():
             messages.warning(request,'Email is alredy taken')
@@ -77,7 +77,7 @@ def ADD_STUDENT(request):
                 mother_mobile_number = mother_mobile_number,
                 present_address = present_address,
                 perment_address = permenent_address,
-                course_id = course ,
+                course_stud = course ,
                 session_start = session_start,
                 session_end = session_end,
                 course_fees = course_fees
@@ -137,6 +137,7 @@ def UPDATE_STUDENT(request):
         session_start = request.POST.get('session_start')
         session_end = request.POST.get('session_end')
         course_fees = request.POST.get('course_fees')
+        print(course_id)
 
 
         user = CustomUser.objects.get(id = student_id)
@@ -169,11 +170,13 @@ def UPDATE_STUDENT(request):
         student.session_start = session_start
         student.session_end = session_end
         student.course_fees = course_fees
-        student.save()
+
 
         course  = Course.objects.get(id = course_id)
-        student.course_id = course
+        print(course)
+        student.course_stud = course
         course.save()
+        student.save()
         messages.success(request, 'All Record Updated Successfully')
         return redirect('view_student')
     return render(request,'Hod/edit_student.html')
@@ -422,7 +425,7 @@ def ADD_COMPUTER_STUDENT(request):
                 mother_mobile_number=mother_mobile_number,
                 present_address=present_address,
                 perment_address=permenent_address,
-                course_id=course,
+                course_comp=course,
                 session_start=session_start,
                 session_end=session_end,
                 course_fees=course_fees
@@ -511,11 +514,12 @@ def UPDATE_COMPUTER_STUDENT(request):
         student.session_start = session_start
         student.session_end = session_end
         student.course_fees = course_fees
-        student.save()
+
 
         course = Computer_Course.objects.get(id=course_id)
-        student.course_id = course
+        student.course_comp = course
         course.save()
+        student.save()
         messages.success(request, 'All Record Updated Successfully')
         return redirect('view_computer_student')
     return render(request, 'Hod/computer_student_edit.html')
@@ -585,3 +589,11 @@ def FEES_ADD__VIEW_COMPUTER_STUDENT(request):
         'monthly_Fees': monthly_Fees
     }
     return render(request, 'Hod/computer_student_fees_view_student.html', context)
+
+
+def FEES_RECEIPT_COMPUTER_STUDENT(request,id):
+    monthly_Fees = Computer_Student_monthly_Fees.objects.filter(id=id)
+    context = {
+        'monthly_Fees': monthly_Fees
+    }
+    return render(request, 'Hod/computer_student_fees_receipt.html', context)

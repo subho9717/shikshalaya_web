@@ -30,7 +30,7 @@
                 <ul>
                    <li><a href="{% url 'view_computer_student' %}">Student View</a></li>
                    <li><a href="{% url 'add_computer_student' %}">Student Add</a></li>
-                  <li><a href="#">Student Fees & Receipt</a></li>
+                  <li><a href="{% url 'fees_add_view_computer_student' %}">Student Fees & Receipt</a></li>
                     <li class="submenu">
                         <a href="#"><i class="fas fa-building"></i> <span> Course</span> <span class="menu-arrow"></span></a>
                         <ul>
@@ -60,8 +60,8 @@
              <li class="submenu">
                 <a href="#"><i class="fas fa-book-reader"></i> <span> Student Fees</span> <span class="menu-arrow"></span></a>
                 <ul>
-                   <li><a href="subjects.html">Student  Fees View</a></li>
-                   <li><a href="add-subject.html">Student  Fees Add</a></li>
+                   <li><a href="{% url 'fees_add_view_student' %}">Student  Fees View</a></li>
+                   <li><a href="{% url 'fees_add_view_computer_student' %}">Computer  Fees View</a></li>
                 </ul>
              </li>
              <li class="submenu">

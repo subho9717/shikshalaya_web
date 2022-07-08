@@ -59,8 +59,44 @@
            {% endfor %}
         {% endif  %}
                      <div class="col-auto text-right float-right ml-auto">
-                        <a href="#" class="btn btn-outline-primary mr-2"><i class="fas fa-download"></i> Download</a>
-                        <a href="{% url 'add_student' %}" class="btn btn-primary"><i class="fas fa-plus"></i></a>
+                        <a href="#" onclick="exportToExcel('tblexportData')" class="btn btn-outline-primary mr-2"><i class="fas fa-download"></i> Download</a>
+                          <script type="text/javascript">
+
+                            var today= new Date().toLocaleString('en-US', { timeZone: 'UTC' });
+
+                            function exportToExcel(tableID, filename = 'shikshalaya_computer_student_Data_'+ today){
+                                var downloadurl;
+                                var dataFileType = 'application/vnd.ms-excel';
+                                var tableSelect = document.getElementById(tableID);
+                                var tableHTMLData = tableSelect.outerHTML.replace(/ /g, '%20');
+
+                                // Specify file name
+                                filename = filename?filename+'.xls':'export_excel_data.xls';
+
+                                // Create download link element
+                                downloadurl = document.createElement("a");
+
+                                document.body.appendChild(downloadurl);
+
+                                if(navigator.msSaveOrOpenBlob){
+                                    var blob = new Blob(['\ufeff', tableHTMLData], {
+                                        type: dataFileType
+                                    });
+                                    navigator.msSaveOrOpenBlob( blob, filename);
+                                }else{
+                                    // Create a link to the file
+                                    downloadurl.href = 'data:' + dataFileType + ', ' + tableHTMLData;
+
+                                    // Setting the file name
+                                    downloadurl.download = filename;
+
+                                    //triggering the function
+                                    downloadurl.click();
+                                }
+                            }
+
+                            </script>
+                        <a href="{% url 'add_computer_student' %}" class="btn btn-primary"><i class="fas fa-plus"></i></a>
                      </div>
                   </div>
                </div>
@@ -69,7 +105,7 @@
                      <div class="card card-table">
                         <div class="card-body">
                            <div class="table-responsive">
-                              <table  id="table_id" class="table table-hover table-center mb-0 ">
+                              <table  id="tblexportData" class="table table-hover table-center mb-0 ">
                                  <thead>
                                     <tr>
                                        <th>ID</th>
@@ -101,7 +137,7 @@
                                           </h2>
                                        </td>
                                        <td>{{i.admin.email}}</td>
-                                       <td>{{i.course_id.name}}</td>
+                                       <td>{{i.course_comp.name}}</td>
                                        <td>{{i.gender}}</td>
                                        <td>{{i.present_address}}</td>
                                        <td>{{i.mobile_number}}</td>
