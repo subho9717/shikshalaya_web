@@ -2,6 +2,7 @@ from django.shortcuts import redirect,render
 from django.contrib.auth.decorators import login_required
 from shikshalaya_computer_app.models import Course,CustomUser,Student,Student_monthly_Fees,Computer_Course,Computer_Student,Computer_Student_monthly_Fees
 from django.contrib  import messages
+import sqlite3
 
 @login_required(login_url='/')
 def HOME(request):
@@ -384,6 +385,7 @@ def ADD_COMPUTER_STUDENT(request):
         course_id = request.POST.get('course_id')
         session_start = request.POST.get('session_start')
         session_end = request.POST.get('session_end')
+        registration_fees = request.POST.get('registration_fees')
         course_fees = request.POST.get('course_fees')
         # print(profile_pic,first_name,last_name,email,username,password,gender,date_of_birth,Class,joining_date,mobile_number,admission_number,father_name,father_occupation,father_mobile_number,mother_name,mother_mobile_number,mother_occupation,present_address,permenent_address,course_id,course,session_start,session_end,course_fees)
 
@@ -428,6 +430,7 @@ def ADD_COMPUTER_STUDENT(request):
                 course_comp=course,
                 session_start=session_start,
                 session_end=session_end,
+                registration_fees = registration_fees,
                 course_fees=course_fees
             )
             student.save()
@@ -442,6 +445,7 @@ def ADD_COMPUTER_STUDENT(request):
 @login_required(login_url='/')
 def VIEW_COMPUTER_STUDENT(request):
     student = Computer_Student.objects.all()
+
     context = {
         'student': student
     }
@@ -483,6 +487,7 @@ def UPDATE_COMPUTER_STUDENT(request):
         course_id = request.POST.get('course_id')
         session_start = request.POST.get('session_start')
         session_end = request.POST.get('session_end')
+        registration_fees = request.POST.get('registration_fees')
         course_fees = request.POST.get('course_fees')
 
         user = CustomUser.objects.get(id=student_id)
@@ -513,6 +518,7 @@ def UPDATE_COMPUTER_STUDENT(request):
         student.permenent_address = permenent_address
         student.session_start = session_start
         student.session_end = session_end
+        student.registration_fees = registration_fees
         student.course_fees = course_fees
 
 

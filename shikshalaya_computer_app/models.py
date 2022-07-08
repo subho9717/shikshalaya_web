@@ -88,6 +88,7 @@ class Computer_Student(models.Model):
     course_comp = models.ForeignKey(Computer_Course,on_delete=models.DO_NOTHING)
     session_start = models.CharField(max_length=100)
     session_end =models.CharField(max_length=100)
+    registration_fees = models.IntegerField()
     course_fees = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
