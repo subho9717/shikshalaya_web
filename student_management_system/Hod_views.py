@@ -6,7 +6,14 @@ import sqlite3
 
 @login_required(login_url='/')
 def HOME(request):
-    return render(request,'Hod/Home.html')
+    student_count = Student.objects.all().count()
+    computer_student_count = Computer_Student.objects.all().count()
+    content = \
+        {
+            'student_count':student_count,
+            'computer_student_count':computer_student_count
+        }
+    return render(request,'Hod/Home.html',content)
 
 @login_required(login_url='/')
 def ADD_STUDENT(request):
