@@ -546,7 +546,6 @@ def DELETE_COMPUTER_STUDENT(request,admin):
 
 @login_required(login_url='/')
 def Detail_COMPUTER_STUDENT(request,id):
-    print(id)
     student = Computer_Student.objects.filter(id=id)
     course = Computer_Course.objects.all()
     context = {
@@ -567,9 +566,9 @@ def FEES_COMPUTER_STUDENT(request,id):
     return render(request, 'Hod/computer_student_fees.html', context)
 
 @login_required(login_url='/')
-def FEES_ADD_COMPUTER_STUDENT(request):
+def FEES_ADD_COMPUTER_STUDENT_d(request,id):
     if request.method == 'POST':
-        student_id = request.POST.get('student_id')
+        student_id = id
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
         email = request.POST.get('email')
@@ -577,7 +576,7 @@ def FEES_ADD_COMPUTER_STUDENT(request):
         course_fees = request.POST.get('course_fees')
         months = request.POST.get('months')
         month_fees = request.POST.get('month_fees')
-        print(student_id, first_name, last_name, email,  course_id, course_fees, months, month_fees)
+        # print(student_id, first_name, last_name, email,  course_id, course_fees, months, month_fees,'ok')
 
         Student_monthly_Fees_data = Computer_Student_monthly_Fees(
             Student_id=student_id,
@@ -595,12 +594,13 @@ def FEES_ADD_COMPUTER_STUDENT(request):
     return render(request, 'Hod/computer_student_fees_view_student.html.html')
 
 @login_required(login_url='/')
-def FEES_ADD__VIEW_COMPUTER_STUDENT(request):
+def FEES_ADD_VIEW_COMPUTER_STUDENT(request):
+    print('test')
     monthly_Fees = Computer_Student_monthly_Fees.objects.all()
-    # print(monthly_Fees.)
     context = {
         'monthly_Fees': monthly_Fees
     }
+
     return render(request, 'Hod/computer_student_fees_view_student.html', context)
 
 @login_required(login_url='/')
@@ -610,3 +610,5 @@ def FEES_RECEIPT_COMPUTER_STUDENT(request,id):
         'monthly_Fees': monthly_Fees
     }
     return render(request, 'Hod/computer_student_fees_receipt.html', context)
+
+

@@ -65,9 +65,10 @@
                   <div class="col-sm-12">
                      <div class="card">
                         <div class="card-body">
-                           <form method="post" action="{% url 'fees_add_computer_student' %}" enctype="multipart/form-data">
+                        {% for i in student %}
+                           <form method="post" action="{% url 'fees_add_computer_student_d' i.id %}" enctype="multipart/form-data">
                               {% csrf_token %}
-                              {% for i in student %}
+
 
                               <div class="row">
                                  <div class="col-12">
@@ -262,8 +263,9 @@
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                  </div>
                               </div>
-                              {% endfor %}
+
                            </form>
+                            {% endfor %}
                         </div>
                      </div>
                   </div>

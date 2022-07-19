@@ -58,8 +58,8 @@ urlpatterns = [
     path('Hod/Computer/Student/Delete/<str:admin>',Hod_views.DELETE_COMPUTER_STUDENT,name='delete_computer_student'),
     path('Hod/Computer/Student/Detail/<str:id>',Hod_views.Detail_COMPUTER_STUDENT,name='detail_computer_student'),
     path('Hod/Computer/Student/Fees/<str:id>',Hod_views.FEES_COMPUTER_STUDENT,name='fees_computer_student'),
-    path('Hod/Computer/Student/Fees_Add',Hod_views.FEES_ADD_COMPUTER_STUDENT,name='fees_add_computer_student'),
-    path('Hod/Computer/Student/Fees_Add/View',Hod_views.FEES_ADD__VIEW_COMPUTER_STUDENT,name='fees_add_view_computer_student'),
+    path('Hod/Computer/Student/Fees_Add_d/<str:id>',Hod_views.FEES_ADD_COMPUTER_STUDENT_d,name='fees_add_computer_student_d'),
+    path('Hod/Computer/Student/Fees_Add/View',Hod_views.FEES_ADD_VIEW_COMPUTER_STUDENT,name='fees_add_view_computer_student'),
     path('Hod/Computer/Student/Fees_Receipt/<str:id>',Hod_views.FEES_RECEIPT_COMPUTER_STUDENT,name='fees_receipt_computer_student'),
 
     path('Hod/Computer/Course/Add',Hod_views.ADD_COMPUTER_COURSE,name='add_computer_course'),
