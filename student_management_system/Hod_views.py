@@ -270,9 +270,9 @@ def FEES_STUDENT(request,id):
     return render(request,'Hod/fees_student.html', context)
 
 @login_required(login_url='/')
-def FEES_ADD_STUDENT(request):
+def FEES_ADD_STUDENT_d(request,id):
     if request.method == 'POST':
-        student_id = request.POST.get('student_id')
+        student_id = id
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
         email = request.POST.get('email')

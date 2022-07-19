@@ -40,7 +40,7 @@ urlpatterns = [
     path('Hod/Student/Delete/<str:admin>',Hod_views.DELETE_STUDENT,name='delete_student'),
     path('Hod/Student/Detail/<str:id>',Hod_views.Detail_STUDENT,name='detail_student'),
     path('Hod/Student/Fees/<str:id>',Hod_views.FEES_STUDENT,name='fees_student'),
-    path('Hod/Student/Fees_Add',Hod_views.FEES_ADD_STUDENT,name='fees_add_student'),
+    path('Hod/Student/Fees_Add_d/<str:id>',Hod_views.FEES_ADD_STUDENT_d,name='fees_add_student_d'),
     path('Hod/Student/Fees_Add/View',Hod_views.FEES_ADD__VIEW_STUDENT,name='fees_add_view_student'),
     path('Hod/Student/Fees_Receipt/<str:id>',Hod_views.FEES_RECEIPT_STUDENT,name='fees_receipt_student'),
 
