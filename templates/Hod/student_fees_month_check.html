@@ -112,20 +112,10 @@
                                        <th>Admission Number</th>
                                        <th>Name</th>
 
-                                       <th>January</th>
-                                       <th>Feburary</th>
-                                       <th>March</th>
-                                       <th>April</th>
-                                       <th>May</th>
-                                       <th>June</th>
-                                       <th>July</th>
-                                       <th>August</th>
-                                        <th>September</th>
-                                        <th>October</th>
-                                        <th>November</th>
-                                        <th>December</th>
+                                       <th>Fees:Month</th>
 
-                                       <th class="text-right">Action</th>
+
+
                                     </tr>
                                  </thead>
                                  <tbody>
@@ -142,80 +132,68 @@
                                        </td>
                                     {% for r in monthly_Fees %}
                                         {% if i.id == r.Student_id and r.month == 'January' %}
-                                       <td>{{r.month_fees}}</td>
+                                       <td>{{r.month_fees}}:{{ r.month }}</td>
 
                                         {% endif %}
                                         {% endfor %}
                                        {% for r in monthly_Fees %}
                                             {% if i.id == r.Student_id and r.month == 'Faberuary' %}
-                                                <td>{{r.month_fees}}</td>
+                                                <td>{{r.month_fees}}:{{ r.month }}</td>
 
                                         {% endif %}
                                         {% endfor %}
                                        {% for r in monthly_Fees %}
                                         {% if i.id == r.Student_id and r.month == 'March' %}
-                                       <td>{{r.month_fees}}</td>
+                                       <td>{{r.month_fees}}:{{ r.month }}</td>
                                         {% endif %}
                                         {% endfor %}
                                        {% for r in monthly_Fees %}
                                         {% if i.id == r.Student_id and r.month == 'April' %}
-                                       <td>{{r.month_fees}}</td>
+                                       <td>{{r.month_fees}}:{{ r.month }}</td>
                                         {% endif %}
                                         {% endfor %}
                                       {% for r in monthly_Fees %}
                                         {% if i.id == r.Student_id and r.month == 'May' %}
-                                       <td>{{r.month_fees}}</td>
+                                       <td>{{r.month_fees}}:{{ r.month }}</td>
                                         {% endif %}
                                         {% endfor %}
                                        {% for r in monthly_Fees %}
                                         {% if i.id == r.Student_id and r.month == 'June' %}
-                                       <td>{{r.month_fees}}</td>
+                                       <td>{{r.month_fees}}:{{ r.month }}</td>
                                         {% endif %}
                                         {% endfor %}
                                        {% for r in monthly_Fees %}
                                         {% if i.id == r.Student_id and r.month == 'July' %}
-                                       <td>{{r.month_fees}}</td>
+                                       <td>{{r.month_fees}}:{{ r.month }}</td>
                                         {% endif %}
                                         {% endfor %}
                                        {% for r in monthly_Fees %}
                                         {% if i.id == r.Student_id and r.month == 'August' %}
-                                       <td>{{r.month_fees}}</td>
+                                       <td>{{r.month_fees}}:{{ r.month }}</td>
                                         {% endif %}
                                         {% endfor %}
                                        {% for r in monthly_Fees %}
                                         {% if i.id == r.Student_id and r.month == 'September' %}
-                                       <td>{{r.month_fees}}</td>
+                                       <td>{{r.month_fees}}:{{ r.month }}</td>
                                         {% endif %}
                                         {% endfor %}
                                         {% for r in monthly_Fees %}
                                         {% if i.id == r.Student_id and r.month == 'October' %}
-                                       <td>{{r.month_fees}}</td>
+                                       <td>{{r.month_fees}}:{{ r.month }}</td>
                                         {% endif %}
                                         {% endfor %}
                                         {% for r in monthly_Fees %}
                                         {% if i.id == r.Student_id and r.month == 'November' %}
-                                       <td>{{r.month_fees}}</td>
+                                       <td>{{r.month_fees}}:{{ r.month }}</td>
                                         {% endif %}
                                         {% endfor %}
                                         {% for r in monthly_Fees %}
                                         {% if i.id == r.Student_id and r.month == 'December' %}
-                                       <td>{{r.month_fees}}</td>
+                                       <td>{{r.month_fees}}:{{ r.month }}</td>
                                         {% endif %}
                                         {% endfor %}
 
-                                       <td class="text-right">
-                                          <div class="actions">
-                                             <a href="#" class="btn btn-sm bg-success-light mr-2">
-                                             <i class="fas fa-pen"></i>
-                                             </a>
-                                             <a href="#" class="btn btn-sm bg-danger-light">
-                                             <i class="fas fa-trash"></i>
-                                             </a>
-                                             <a href="#" class="btn btn-sm bg-danger-light">
-                                             <i class="fas fa-rupee-sign"></i>
-                                             </a>
-                                          </div>
-                                       </td>
+
                                     </tr>
                                  {% endfor %}
                                  </tbody>
