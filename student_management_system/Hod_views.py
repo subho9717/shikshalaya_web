@@ -460,10 +460,7 @@ def VIEW_COMPUTER_STUDENT(request):
     mf = cursor.execute("select Student_id, sum(month_fees) as sum_month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by Student_id")
     data_result_mf = mf.fetchall()
 
-    mf = cursor.execute(
-        "select Student_id, sum(month_fees) as sum_month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by Student_id")
 
-    data_result_mf = mf.fetchall()
 
     cf = cursor.execute("select id, course_fees	 from shikshalaya_computer_app_computer_student")
     data_result_cf = cf.fetchall()
