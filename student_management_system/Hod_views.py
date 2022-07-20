@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from shikshalaya_computer_app.models import Course,CustomUser,Student,Student_monthly_Fees,Computer_Course,Computer_Student,Computer_Student_monthly_Fees
 from django.contrib  import messages
 import sqlite3
-import pandas as pd
+# import pandas as pd
 
 @login_required(login_url='/')
 def HOME(request):
