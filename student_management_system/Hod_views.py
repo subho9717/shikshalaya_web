@@ -639,5 +639,11 @@ def FEES_RECEIPT_COMPUTER_STUDENT(request,id):
     return render(request, 'Hod/computer_student_fees_receipt.html', context)
 
 
-def FEES_RECEIPT_COMPUTER_STUDENT_MONTH():
-    return None
+def FEES_RECEIPT_COMPUTER_STUDENT_MONTH(request):
+    student = Computer_Student.objects.all()
+    monthly_Fees = Computer_Student_monthly_Fees.objects.all()
+    context = {
+        'student':student,
+        'monthly_Fees': monthly_Fees
+    }
+    return render(request, 'Hod/student_fees_month_check.html', context)
