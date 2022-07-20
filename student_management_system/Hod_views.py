@@ -455,15 +455,15 @@ def ADD_COMPUTER_STUDENT(request):
 @login_required(login_url='/')
 def VIEW_COMPUTER_STUDENT(request):
     student = Computer_Student.objects.all()
-    conn = sqlite3.connect(r'.\db.sqlite3')
+    conn = sqlite3.connect(r'db.sqlite3')
     cursor = conn.cursor()
-    cursor.execute("select Student_id, sum(month_fees) as sum_month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by Student_id")
-    data_result_mf = cursor.fetchall()
+    mf = cursor.execute("select Student_id, sum(month_fees) as sum_month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by Student_id")
+    data_result_mf = mf.fetchall()
 
 
 
-    cursor.execute("select id, course_fees	 from shikshalaya_computer_app_computer_student")
-    data_result_cf = cursor.fetchall()
+    cf = cursor.execute("select id, course_fees	 from shikshalaya_computer_app_computer_student")
+    data_result_cf = cf.fetchall()
 
     def rem(data_result_cf, data_result_mf):
         rem_fee = []
