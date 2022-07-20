@@ -111,19 +111,19 @@
                                        <th>ID</th>
                                        <th>Admission Number</th>
                                        <th>Name</th>
-                                       <th>Email</th>
-                                       <th>Course</th>
-                                       <th>Gender</th>
-                                       <th>Address</th>
-                                       <th>Mobile Number</th>
-                                       <th>Session Start</th>
-                                       <th>Session End</th>
-                                       <th>Created at</th>
-                                       <th>Updates at</th>
-                                        <th>Registration fees</th>
-                                        <th>Total Amount</th>
-                                        <th>Month Fees Collection</th>
-                                        <th>Remaining Fees</th>
+
+                                       <th>January</th>
+                                       <th>Feburary</th>
+                                       <th>March</th>
+                                       <th>April</th>
+                                       <th>May</th>
+                                       <th>June</th>
+                                       <th>July</th>
+                                       <th>August</th>
+                                        <th>September</th>
+                                        <th>October</th>
+                                        <th>November</th>
+                                        <th>December</th>
 
                                        <th class="text-right">Action</th>
                                     </tr>
@@ -154,11 +154,6 @@
                                         {% for mf in month_fees_cal %}
                                             {% if mf.0 == i.id  %}
                                             <td>{{mf.1}}</td>
-                                            {% endif %}
-                                        {% endfor %}
-                                        {% for rf in rem_fee %}
-                                            {% if rf.0 == i.id   %}
-                                            <td>{{rf.1}}</td>
                                             {% endif %}
                                         {% endfor %}
 

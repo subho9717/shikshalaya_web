@@ -61,6 +61,7 @@ urlpatterns = [
     path('Hod/Computer/Student/Fees_Add_d/<str:id>',Hod_views.FEES_ADD_COMPUTER_STUDENT_d,name='fees_add_computer_student_d'),
     path('Hod/Computer/Student/Fees_Add/View',Hod_views.FEES_ADD_VIEW_COMPUTER_STUDENT,name='fees_add_view_computer_student'),
     path('Hod/Computer/Student/Fees_Receipt/<str:id>',Hod_views.FEES_RECEIPT_COMPUTER_STUDENT,name='fees_receipt_computer_student'),
+    path('Hod/Computer/Student/Fees_Month/',Hod_views.FEES_RECEIPT_COMPUTER_STUDENT_MONTH,name='fees_receipt_computer_student_month'),
 
     path('Hod/Computer/Course/Add',Hod_views.ADD_COMPUTER_COURSE,name='add_computer_course'),
     path('Hod/Computer/Course/View', Hod_views.VIEW_COMPUTER_COURSE, name='view_computer_course'),

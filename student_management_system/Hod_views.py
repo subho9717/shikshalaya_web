@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from shikshalaya_computer_app.models import Course,CustomUser,Student,Student_monthly_Fees,Computer_Course,Computer_Student,Computer_Student_monthly_Fees
 from django.contrib  import messages
 import sqlite3
+import pandas as pd
 
 @login_required(login_url='/')
 def HOME(request):
@@ -304,6 +305,7 @@ def FEES_ADD_STUDENT_d(request,id):
 def FEES_ADD__VIEW_STUDENT(request):
     monthly_Fees = Student_monthly_Fees.objects.all()
     # print(monthly_Fees.)
+
     context={
         'monthly_Fees':monthly_Fees
     }
@@ -332,6 +334,7 @@ def ADD_COMPUTER_COURSE(request):
 @login_required(login_url='/')
 def VIEW_COMPUTER_COURSE(request):
     course = Computer_Course.objects.all()
+
     context = {
         'course': course
     }
@@ -452,9 +455,35 @@ def ADD_COMPUTER_STUDENT(request):
 @login_required(login_url='/')
 def VIEW_COMPUTER_STUDENT(request):
     student = Computer_Student.objects.all()
+    conn = sqlite3.connect(r'.\db.sqlite3')
+    cursor = conn.cursor()
+    mf = cursor.execute("select Student_id, sum(month_fees) as sum_month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by Student_id")
+    data_result_mf = mf.fetchall()
+
+    mf = cursor.execute(
+        "select Student_id, sum(month_fees) as sum_month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by Student_id")
+
+    data_result_mf = mf.fetchall()
+
+    cf = cursor.execute("select id, course_fees	 from shikshalaya_computer_app_computer_student")
+    data_result_cf = cf.fetchall()
+
+    def rem(data_result_cf, data_result_mf):
+        rem_fee = []
+        for cf1 in data_result_cf:
+            for mf1 in data_result_mf:
+                if cf1[0] == mf1[0]:
+                    rem_fee.append([cf1[0], cf1[1] - mf1[1]])
+        return rem_fee
+
+    rem_fee = rem(data_result_cf, data_result_mf)
+    print(rem_fee)
+
 
     context = {
-        'student': student
+        'student': student,
+        'month_fees_cal': data_result_mf,
+        'rem_fee':rem_fee
     }
     return render(request, 'Hod/computer_student_view.html', context)
 
@@ -558,6 +587,7 @@ def Detail_COMPUTER_STUDENT(request,id):
 def FEES_COMPUTER_STUDENT(request,id):
     student = Computer_Student.objects.filter(id=id)
     course = Computer_Course.objects.all()
+
     context = {
         'student': student,
         'course': course
@@ -612,3 +642,5 @@ def FEES_RECEIPT_COMPUTER_STUDENT(request,id):
     return render(request, 'Hod/computer_student_fees_receipt.html', context)
 
 
+def FEES_RECEIPT_COMPUTER_STUDENT_MONTH():
+    return None
