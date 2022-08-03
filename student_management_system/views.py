@@ -4,6 +4,10 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib  import messages
 from django.contrib.auth.decorators import login_required
 from shikshalaya_computer_app.models import CustomUser
+
+import logging
+
+logging.basicConfig(filename="shikshalaya.log" , level=logging.DEBUG ,format='%(levelname)s  %(asctime)s %(message)s')
 #
 @login_required(login_url='/')
 def BASE(request):
@@ -20,6 +24,7 @@ def doLogin(request):
         print(user)
         if user!=None:
             login(request,user)
+            logging.info(user  + "is loggedin")
             user_type = user.user_type
             if user_type == '1':
                 return  redirect('hod_home')

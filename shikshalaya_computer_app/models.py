@@ -90,6 +90,7 @@ class Computer_Student(models.Model):
     session_end =models.CharField(max_length=100)
     registration_fees = models.IntegerField()
     course_fees = models.IntegerField()
+    month = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     def __str__(self):
@@ -107,3 +108,9 @@ class Computer_Student_monthly_Fees(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+class Computer_Expenses(models.Model):
+    name = models.CharField(max_length=100)
+    month = models.CharField(max_length=100)
+    Amount = models.IntegerField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

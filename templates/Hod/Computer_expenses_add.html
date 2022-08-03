@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="content container-fluid">
+               <div class="page-header">
+                  <div class="row align-items-center">
+                     <div class="col">
+                        <h3 class="page-title">Add Computer Cource</h3>
+
+                     </div>
+                  </div>
+               </div>
+                  {% if messages %}
+           {% for message in messages %}
+              {% if  message.tags == 'error' %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <strong> {{message}}</strong>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              {% endif  %}
+           {% endfor %}
+        {% endif  %}
+{% if messages %}
+           {% for message in messages %}
+              {% if  message.tags == 'success' %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong> {{message}}</strong>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              {% endif  %}
+           {% endfor %}
+        {% endif  %}
+{% if messages %}
+           {% for message in messages %}
+              {% if  message.tags == 'warning' %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong> {{message}}</strong>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              {% endif  %}
+           {% endfor %}
+        {% endif  %}
+{% if messages %}
+           {% for message in messages %}
+              {% if  message.tags == 'warning' %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong> {{message}}</strong>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              {% endif  %}
+           {% endfor %}
+        {% endif  %}
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="card">
+                        <div class="card-body">
+                           <form method="post" action="{% url 'computer_expenses_add' %}" >
+                              {% csrf_token %}
+                              <div class="row">
+                                 <div class="col-12">
+                                    <h5 class="form-title"><span>Expenses Information</span></h5>
+                                 </div>
+
+                                 <div class="col-sm-6">
+                                    <div class="form-group">
+                                       <label>Expense Name</label>
+                                       <input type="text" class="form-control" name="name" required>
+                                    </div>
+                                 </div>
+{#                                   <div class="col-12 col-sm-6">#}
+{#                                    <div class="form-group">#}
+{#                                       <label>Month</label>#}
+{#                                       <select class="form-control" name="month"   required/>#}
+{#                                          <option>Select Month</option>#}
+{#                                          <option>January</option>#}
+{#                                          <option>February</option>#}
+{#                                          <option>March</option>#}
+{#                                          <option>April</option>#}
+{#                                          <option>May</option>#}
+{#                                          <option>June</option>#}
+{#                                          <option>July</option>#}
+{#                                          <option>August</option>#}
+{#                                          <option>September</option>#}
+{#                                          <option>October</option>#}
+{#                                          <option>November</option>#}
+{#                                          <option>December</option>#}
+{#                                       </select>#}
+{#                                    </div>#}
+{#                                 </div>#}
+
+                                  <div class="col-sm-6">
+                                    <div class="form-group">
+                                       <label>Amount</label>
+                                       <input type="number" class="form-control" name="Amount" required>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+{% endblock %}

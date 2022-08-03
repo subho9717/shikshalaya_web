@@ -1,16 +1,17 @@
 from django.shortcuts import redirect,render
 from django.contrib.auth.decorators import login_required
-from shikshalaya_computer_app.models import Course,CustomUser,Student,Student_monthly_Fees,Computer_Course,Computer_Student,Computer_Student_monthly_Fees
+from shikshalaya_computer_app.models import Course,CustomUser,Student,Student_monthly_Fees,Computer_Course,Computer_Student,Computer_Student_monthly_Fees,Computer_Expenses
 from django.contrib  import messages
 import sqlite3
-# import pandas as pd
+import datetime
+import logging
 
+logging.basicConfig(filename="shikshalaya.log" , level=logging.DEBUG ,format='%(levelname)s  %(asctime)s %(message)s')
 @login_required(login_url='/')
 def HOME(request):
     student_count = Student.objects.all().count()
     computer_student_count = Computer_Student.objects.all().count()
-    content = \
-        {
+    content = {
             'student_count':student_count,
             'computer_student_count':computer_student_count
         }
@@ -421,7 +422,7 @@ def ADD_COMPUTER_STUDENT(request):
             # session_year_start = Session_Year.session_start.objects.get(id = session_start)
             # session_year_end = Session_Year.session_end.objects.get(id = session_end)
             print(course)
-
+            mydate = datetime.datetime.now()
             student = Computer_Student(
                 admin=user,
                 gender=gender,
@@ -441,7 +442,8 @@ def ADD_COMPUTER_STUDENT(request):
                 session_start=session_start,
                 session_end=session_end,
                 registration_fees = registration_fees,
-                course_fees=course_fees
+                course_fees=course_fees,
+                month = mydate.strftime("%B")
             )
             student.save()
             messages.success(request, user.first_name + '  ' + user.last_name + '   ' + "is successfully added")
@@ -638,7 +640,7 @@ def FEES_RECEIPT_COMPUTER_STUDENT(request,id):
     }
     return render(request, 'Hod/computer_student_fees_receipt.html', context)
 
-
+@login_required(login_url='/')
 def FEES_RECEIPT_COMPUTER_STUDENT_MONTH(request):
     student = Computer_Student.objects.all()
     monthly_Fees = Computer_Student_monthly_Fees.objects.all()
@@ -647,3 +649,85 @@ def FEES_RECEIPT_COMPUTER_STUDENT_MONTH(request):
         'monthly_Fees': monthly_Fees
     }
     return render(request, 'Hod/student_fees_month_check.html', context)
+
+@login_required(login_url='/')
+def COMPUTER_EXPENSES_ADD(request):
+    expenses = Computer_Expenses.objects.all()
+    mydate = datetime.datetime.now()
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        # month = request.POST.get('month')
+        Amount = request.POST.get('Amount')
+        print()
+        expenses = Computer_Expenses(
+            name = name,
+            month = mydate.strftime("%B"),
+            Amount = Amount
+        )
+        expenses.save()
+        messages.success(request, " Expenses is successfully added")
+        return redirect('computer_expenses_view')
+    context = {
+        'expenses':expenses
+    }
+    return render(request, 'Hod/computer_expenses_add.html',context)
+
+@login_required(login_url='/')
+def COMPUTER_EXPENSES_VIEW(request):
+    expenses = Computer_Expenses.objects.all()
+    context = {
+        'expenses': expenses
+    }
+    return render(request, 'Hod/computer_expenses_view.html', context)
+
+@login_required(login_url='/')
+def COMPUTER_EXPENSES_DELETE(request,id):
+    expenses = Computer_Expenses.objects.get(id=id)
+    expenses.delete()
+    messages.success(request, 'Record Deleted Successfully')
+    return redirect('computer_expenses_view')
+
+@login_required(login_url='/')
+def COMPUTER_SALLARY(request):
+    conn = sqlite3.connect(r"db.sqlite3")
+    cursor = conn.cursor()
+
+    df_user_comp_stu1 = cursor.execute(
+        "select month,sum(registration_fees) as registration_fees  from shikshalaya_computer_app_computer_student group by month")
+
+    regl = []
+    for reg in df_user_comp_stu1.fetchall():
+        regl.append(reg)
+
+    df_user_comp_fees = cursor.execute(
+        "select month,sum(month_fees) as month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by month ")
+
+    mfeesl = []
+    for mfees in df_user_comp_fees.fetchall():
+        mfeesl.append(mfees)
+
+    df_user_comp_exp = cursor.execute(
+        "select month,sum(amount) as amount from shikshalaya_computer_app_computer_expenses group by month")
+
+    expl = []
+    for exp in df_user_comp_exp.fetchall():
+        expl.append(exp)
+
+    for regl1 in regl:
+        for mfeesl1 in mfeesl:
+            for expl1 in expl:
+                if regl1[0] == mfeesl1[0] == expl1[0]:
+                    context = {
+                        'month':regl1[0],
+                        'regestraionfees': str(regl1[1]),
+                        'monthfees': str(mfeesl1[1]),
+                        'expenses':str(expl1[1]),
+                        'regfeesshare':str(int(regl1[1])/2),
+                        'expshare':str(int(expl1[1])/2),
+                        'employee': str((int(mfeesl1[1]) * 55) / 100),
+                        # 'rupamsubho': str((int(mfeesl1[1]) * 45) / 100),
+                        'rupamsubhofinal':str(round((int(mfeesl1[1])*45)/100+int(regl1[1])/2-int(expl1[1])/2,1))
+                    }
+                    print(context)
+
+                    return render(request, 'Hod/shareview.html', context)
