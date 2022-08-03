@@ -24,7 +24,7 @@ def doLogin(request):
         print(user)
         if user!=None:
             login(request,user)
-            logging.info(user  + "is loggedin")
+            logging.info(user , "is loggedin")
             user_type = user.user_type
             if user_type == '1':
                 return  redirect('hod_home')
