@@ -5,6 +5,7 @@ from django.contrib  import messages
 import sqlite3
 import datetime
 import logging
+import psycopg2
 
 logging.basicConfig(filename="shikshalaya.log" , level=logging.DEBUG ,format='%(levelname)s  %(asctime)s %(message)s')
 @login_required(login_url='/')
@@ -34,19 +35,19 @@ def ADD_STUDENT(request):
         joining_date = request.POST.get('joining_date')
         mobile_number = request.POST.get('mobile_number')
         admission_number = request.POST.get('admission_number')
-        father_name = request.POST.get('father_name')
-        father_occupation = request.POST.get('father_occupation')
-        father_mobile_number = request.POST.get('father_mobile_number')
-        mother_name = request.POST.get('mother_name')
-        mother_occupation = request.POST.get('mother_occupation')
-        mother_mobile_number = request.POST.get('mother_mobile_number')
+        # father_name = request.POST.get('father_name')
+        # father_occupation = request.POST.get('father_occupation')
+        # father_mobile_number = request.POST.get('father_mobile_number')
+        # mother_name = request.POST.get('mother_name')
+        # mother_occupation = request.POST.get('mother_occupation')
+        # mother_mobile_number = request.POST.get('mother_mobile_number')
         present_address = request.POST.get('present_address')
-        permenent_address = request.POST.get('permenent_address')
+        # permenent_address = request.POST.get('permenent_address')
         course_id = request.POST.get('course_id')
         session_start = request.POST.get('session_start')
         session_end = request.POST.get('session_end')
         course_fees = request.POST.get('course_fees')
-        print(profile_pic,first_name,last_name,email,username,password,gender,date_of_birth,Class,joining_date,mobile_number,admission_number,father_name,father_occupation,father_mobile_number,mother_name,mother_mobile_number,mother_occupation,present_address,permenent_address,course_id,course,session_start,session_end,course_fees)
+        # print(profile_pic,first_name,last_name,email,username,password,gender,date_of_birth,Class,joining_date,mobile_number,admission_number,father_name,father_occupation,father_mobile_number,mother_name,mother_mobile_number,mother_occupation,present_address,permenent_address,course_id,course,session_start,session_end,course_fees)
 
         if CustomUser.objects.filter(email=email).exists():
             messages.warning(request,'Email is alredy taken')
@@ -79,14 +80,14 @@ def ADD_STUDENT(request):
                 joining_date = joining_date,
                 mobile_number = mobile_number,
                 admission_number = admission_number,
-                father_name=father_name,
-                father_occupation = father_occupation,
-                father_mobile = father_mobile_number,
-                mother_name = mother_name,
-                mother_occupation = mother_occupation,
-                mother_mobile_number = mother_mobile_number,
+                # father_name=father_name,
+                # father_occupation = father_occupation,
+                # father_mobile = father_mobile_number,
+                # mother_name = mother_name,
+                # mother_occupation = mother_occupation,
+                # mother_mobile_number = mother_mobile_number,
                 present_address = present_address,
-                perment_address = permenent_address,
+                # perment_address = permenent_address,
                 course_stud = course ,
                 session_start = session_start,
                 session_end = session_end,
@@ -382,23 +383,23 @@ def ADD_COMPUTER_STUDENT(request):
         password = request.POST.get('password')
         gender = request.POST.get('gender')
         date_of_birth = request.POST.get('date_of_birth')
-        joining_date = request.POST.get('joining_date')
+        # joining_date = request.POST.get('joining_date')
         mobile_number = request.POST.get('mobile_number')
         admission_number = request.POST.get('admission_number')
-        father_name = request.POST.get('father_name')
-        father_occupation = request.POST.get('father_occupation')
-        father_mobile_number = request.POST.get('father_mobile_number')
-        mother_name = request.POST.get('mother_name')
-        mother_occupation = request.POST.get('mother_occupation')
-        mother_mobile_number = request.POST.get('mother_mobile_number')
-        present_address = request.POST.get('present_address')
-        permenent_address = request.POST.get('permenent_address')
+        # father_name = request.POST.get('father_name')
+        # father_occupation = request.POST.get('father_occupation')
+        # father_mobile_number = request.POST.get('father_mobile_number')
+        # mother_name = request.POST.get('mother_name')
+        # mother_occupation = request.POST.get('mother_occupation')
+        # mother_mobile_number = request.POST.get('mother_mobile_number')
+        # present_address = request.POST.get('present_address')
+        # permenent_address = request.POST.get('permenent_address')
         course_id = request.POST.get('course_id')
         session_start = request.POST.get('session_start')
         session_end = request.POST.get('session_end')
         registration_fees = request.POST.get('registration_fees')
         course_fees = request.POST.get('course_fees')
-        # print(profile_pic,first_name,last_name,email,username,password,gender,date_of_birth,Class,joining_date,mobile_number,admission_number,father_name,father_occupation,father_mobile_number,mother_name,mother_mobile_number,mother_occupation,present_address,permenent_address,course_id,course,session_start,session_end,course_fees)
+        print(profile_pic,first_name,last_name,email,username,password,gender,date_of_birth,mobile_number,admission_number,course_id,course,session_start,session_end,course_fees)
 
         if CustomUser.objects.filter(email=email).exists():
             messages.warning(request, 'Email is alredy taken')
@@ -427,17 +428,17 @@ def ADD_COMPUTER_STUDENT(request):
                 admin=user,
                 gender=gender,
                 date_of_birth=date_of_birth,
-                joining_date=joining_date,
+                # joining_date=joining_date,
                 mobile_number=mobile_number,
                 admission_number=admission_number,
-                father_name=father_name,
-                father_occupation=father_occupation,
-                father_mobile=father_mobile_number,
-                mother_name=mother_name,
-                mother_occupation=mother_occupation,
-                mother_mobile_number=mother_mobile_number,
-                present_address=present_address,
-                perment_address=permenent_address,
+                # father_name=father_name,
+                # father_occupation=father_occupation,
+                # father_mobile=father_mobile_number,
+                # mother_name=mother_name,
+                # mother_occupation=mother_occupation,
+                # mother_mobile_number=mother_mobile_number,
+                # present_address=present_address,
+                # perment_address=permenent_address,
                 course_comp=course,
                 session_start=session_start,
                 session_end=session_end,
@@ -457,22 +458,33 @@ def ADD_COMPUTER_STUDENT(request):
 @login_required(login_url='/')
 def VIEW_COMPUTER_STUDENT(request):
     student = Computer_Student.objects.all()
-    conn = sqlite3.connect(r'db.sqlite3')
+    # conn = sqlite3.connect(r'db.sqlite3')
+    conn = psycopg2.connect(
+        host="ec2-54-152-28-9.compute-1.amazonaws.com",
+        database="dembhfve0a83tr",
+        user="jcnsowkypgbkok",
+        password="fd8280d92c06d4116cce5ba3c201ba9dd97869e3a72dc3247918ea93bd5d6db1")
     cursor = conn.cursor()
-    mf = cursor.execute("select Student_id, sum(month_fees) as sum_month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by Student_id")
-    data_result_mf = mf.fetchall()
+    cursor.execute('select "Student_id", sum(month_fees) as sum_month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by "Student_id" ')
+    data_result_mf = []
+    for r in cursor.fetchall():
+        data_result_mf.append([int(r[0]), r[1]])
+    print(data_result_mf)
 
 
 
-    cf = cursor.execute("select id, course_fees	 from shikshalaya_computer_app_computer_student")
-    data_result_cf = cf.fetchall()
+    cursor.execute("select id, course_fees	 from shikshalaya_computer_app_computer_student")
+    data_result_cf = cursor.fetchall()
+    # print(data_result_cf)
 
     def rem(data_result_cf, data_result_mf):
         rem_fee = []
         for cf1 in data_result_cf:
             for mf1 in data_result_mf:
+
                 if cf1[0] == mf1[0]:
-                    rem_fee.append([cf1[0], cf1[1] - mf1[1]])
+                    # print(cf1[0] == mf1[0])
+                    rem_fee.append([int(cf1[0]), int(cf1[1]) - int(mf1[1])])
         return rem_fee
 
     rem_fee = rem(data_result_cf, data_result_mf)
@@ -689,29 +701,37 @@ def COMPUTER_EXPENSES_DELETE(request,id):
 
 @login_required(login_url='/')
 def COMPUTER_SALLARY(request):
-    conn = sqlite3.connect(r"db.sqlite3")
+    # conn = sqlite3.connect(r"db.sqlite3")
+    conn = psycopg2.connect(
+        host="ec2-54-152-28-9.compute-1.amazonaws.com",
+        database="dembhfve0a83tr",
+        user="jcnsowkypgbkok",
+        password="fd8280d92c06d4116cce5ba3c201ba9dd97869e3a72dc3247918ea93bd5d6db1")
     cursor = conn.cursor()
 
-    df_user_comp_stu1 = cursor.execute(
+    cursor.execute(
         "select month,sum(registration_fees) as registration_fees  from shikshalaya_computer_app_computer_student group by month")
 
     regl = []
-    for reg in df_user_comp_stu1.fetchall():
+    for reg in cursor.fetchall():
         regl.append(reg)
+    print(regl)
 
-    df_user_comp_fees = cursor.execute(
+    cursor.execute(
         "select month,sum(month_fees) as month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by month ")
 
     mfeesl = []
-    for mfees in df_user_comp_fees.fetchall():
+    for mfees in cursor.fetchall():
         mfeesl.append(mfees)
+    print(mfeesl)
 
-    df_user_comp_exp = cursor.execute(
-        "select month,sum(amount) as amount from shikshalaya_computer_app_computer_expenses group by month")
+    cursor.execute(
+        'select month,sum("Amount") as amount from shikshalaya_computer_app_computer_expenses group by month')
 
     expl = []
-    for exp in df_user_comp_exp.fetchall():
+    for exp in cursor.fetchall():
         expl.append(exp)
+    print(expl)
 
     for regl1 in regl:
         for mfeesl1 in mfeesl:
