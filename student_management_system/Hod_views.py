@@ -5,7 +5,6 @@ from django.contrib  import messages
 import sqlite3
 import datetime
 import logging
-from mysql.connector import  connect
 
 logging.basicConfig(filename="shikshalaya.log" , level=logging.DEBUG ,format='%(levelname)s  %(asctime)s %(message)s')
 @login_required(login_url='/')

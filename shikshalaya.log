@@ -1257,3 +1257,7 @@ Traceback (most recent call last):
   File "E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
     raise ValueError(
 ValueError: The view student_management_system.Hod_views.COMPUTER_SALLARY didn't return an HttpResponse object. It returned None instead.
+INFO  2022-08-05 12:47:25,705 E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\student_management_system\student_management_system\settings.py changed, reloading.
+INFO  2022-08-05 12:47:42,967 E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\student_management_system\student_management_system\settings.py changed, reloading.
+INFO  2022-08-05 12:49:11,663 E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\student_management_system\student_management_system\settings.py changed, reloading.
+INFO  2022-08-05 13:17:09,854 E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\student_management_system\student_management_system\Hod_views.py changed, reloading.
