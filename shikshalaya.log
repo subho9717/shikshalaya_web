@@ -1218,3 +1218,42 @@ connection to server at "ec2-54-152-28-9.compute-1.amazonaws.com" (54.152.28.9),
 
 INFO  2022-08-04 17:17:10,233 E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\student_management_system\student_management_system\Hod_views.py changed, reloading.
 INFO  2022-08-04 17:20:30,750 E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\student_management_system\student_management_system\settings.py changed, reloading.
+INFO  2022-08-05 11:51:59,047 E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\student_management_system\student_management_system\settings.py changed, reloading.
+ERROR  2022-08-05 11:53:08,335 Internal Server Error: /Hod/Computer/Student/View
+Traceback (most recent call last):
+  File "E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\student_management_system\student_management_system\Hod_views.py", line 462, in VIEW_COMPUTER_STUDENT
+    conn = psycopg2.connect(
+  File "E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "ec2-54-152-28-9.compute-1.amazonaws.com" (54.152.28.9), port 5432 failed: FATAL:  password authentication failed for user "jcnsowkypgbkok"
+connection to server at "ec2-54-152-28-9.compute-1.amazonaws.com" (54.152.28.9), port 5432 failed: FATAL:  no pg_hba.conf entry for host "106.202.70.177", user "jcnsowkypgbkok", database "dembhfve0a83tr", no encryption
+
+WARNING  2022-08-05 11:53:08,557 Not Found: /favicon.ico
+INFO  2022-08-05 11:56:08,669 E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\student_management_system\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-05 11:57:19,544 E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\student_management_system\student_management_system\settings.py changed, reloading.
+INFO  2022-08-05 11:57:33,736 E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\student_management_system\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-05 11:57:41,667 E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\student_management_system\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-05 12:03:17,024 Internal Server Error: /Hod/Computer/Sallary
+Traceback (most recent call last):
+  File "E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view student_management_system.Hod_views.COMPUTER_SALLARY didn't return an HttpResponse object. It returned None instead.
+ERROR  2022-08-05 12:03:20,462 Internal Server Error: /Hod/Computer/Sallary
+Traceback (most recent call last):
+  File "E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view student_management_system.Hod_views.COMPUTER_SALLARY didn't return an HttpResponse object. It returned None instead.

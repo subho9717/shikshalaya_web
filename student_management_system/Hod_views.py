@@ -5,7 +5,7 @@ from django.contrib  import messages
 import sqlite3
 import datetime
 import logging
-import psycopg2
+from mysql.connector import  connect
 
 logging.basicConfig(filename="shikshalaya.log" , level=logging.DEBUG ,format='%(levelname)s  %(asctime)s %(message)s')
 @login_required(login_url='/')
@@ -458,12 +458,12 @@ def ADD_COMPUTER_STUDENT(request):
 @login_required(login_url='/')
 def VIEW_COMPUTER_STUDENT(request):
     student = Computer_Student.objects.all()
-    # conn = sqlite3.connect(r'db.sqlite3')
-    conn = psycopg2.connect(
-        host="ec2-54-152-28-9.compute-1.amazonaws.com",
-        database="dembhfve0a83tr",
-        user="jcnsowkypgbkok",
-        password="fd8280d92c06d4116cce5ba3c201ba9dd97869e3a72dc3247918ea93bd5d6db1")
+    conn = sqlite3.connect(r'db.sqlite3')
+    # conn = psycopg2.connect(
+    #     host="ec2-54-152-28-9.compute-1.amazonaws.com",
+    #     database="dembhfve0a83tr",
+    #     user="jcnsowkypgbkok",
+    #     password="fd8280d92c06d4116cce5ba3c201ba9dd97869e3a72dc3247918ea93bd5d6db1")
     cursor = conn.cursor()
     cursor.execute('select "Student_id", sum(month_fees) as sum_month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by "Student_id" ')
     data_result_mf = []
@@ -701,12 +701,12 @@ def COMPUTER_EXPENSES_DELETE(request,id):
 
 @login_required(login_url='/')
 def COMPUTER_SALLARY(request):
-    # conn = sqlite3.connect(r"db.sqlite3")
-    conn = psycopg2.connect(
-        host="ec2-54-152-28-9.compute-1.amazonaws.com",
-        database="dembhfve0a83tr",
-        user="jcnsowkypgbkok",
-        password="fd8280d92c06d4116cce5ba3c201ba9dd97869e3a72dc3247918ea93bd5d6db1")
+    conn = sqlite3.connect(r"db.sqlite3")
+    # conn = psycopg2.connect(
+    #     host="ec2-54-152-28-9.compute-1.amazonaws.com",
+    #     database="dembhfve0a83tr",
+    #     user="jcnsowkypgbkok",
+    #     password="fd8280d92c06d4116cce5ba3c201ba9dd97869e3a72dc3247918ea93bd5d6db1")
     cursor = conn.cursor()
 
     cursor.execute(
