@@ -1257,6 +1257,7 @@ Traceback (most recent call last):
   File "E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
     raise ValueError(
 ValueError: The view student_management_system.Hod_views.COMPUTER_SALLARY didn't return an HttpResponse object. It returned None instead.
+<<<<<<< HEAD
 INFO  2022-08-11 12:21:48,106 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
 INFO  2022-08-11 12:36:01,981 E:\python\shikshalaya_web\student_management_system\settings.py changed, reloading.
 INFO  2022-08-11 12:36:30,417 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
@@ -3225,3 +3226,11 @@ HINT:  Perhaps you meant to reference the column "shikshalaya_computer_app_compu
 WARNING  2022-08-11 15:50:04,373 Not Found: /favicon.ico
 INFO  2022-08-11 15:50:23,722 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
 INFO  2022-08-11 15:50:30,595 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+=======
+INFO  2022-08-05 12:47:25,705 E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\student_management_system\student_management_system\settings.py changed, reloading.
+INFO  2022-08-05 12:47:42,967 E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\student_management_system\student_management_system\settings.py changed, reloading.
+INFO  2022-08-05 12:49:11,663 E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\student_management_system\student_management_system\settings.py changed, reloading.
+INFO  2022-08-05 13:17:09,854 E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\student_management_system\student_management_system\Hod_views.py changed, reloading.
+>>>>>>> origin/main
+INFO  2022-08-11 15:56:43,244 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 15:56:48,989 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
