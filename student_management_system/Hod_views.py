@@ -2,21 +2,87 @@ from django.shortcuts import redirect,render
 from django.contrib.auth.decorators import login_required
 from shikshalaya_computer_app.models import Course,CustomUser,Student,Student_monthly_Fees,Computer_Course,Computer_Student,Computer_Student_monthly_Fees,Computer_Expenses
 from django.contrib  import messages
-import sqlite3
 import datetime
+import sqlite3
 import logging
-
+import  psycopg2
+import pandas as pd
 
 logging.basicConfig(filename="shikshalaya.log" , level=logging.DEBUG ,format='%(levelname)s  %(asctime)s %(message)s')
+conn = psycopg2.connect(
+        host="satao.db.elephantsql.com",
+        database="bhkpnqch",
+        user="bhkpnqch",
+        password="u5N4eHFTnwxRj9XhlTMPhqy3kudxnqR0")
+cursor = conn.cursor()
+
 @login_required(login_url='/')
 def HOME(request):
+
+
+
     student_count = Student.objects.all().count()
     computer_student_count = Computer_Student.objects.all().count()
+
+    mydate = datetime.datetime.now()
+    month = mydate.strftime("%B")
+
+    # expenses fees
+    def exp():
+        q1 = 'SELECT sum("Amount") FROM shikshalaya_computer_app_computer_expenses where month = '"'%s'"' group by month;'%month
+        cursor.execute(q1)
+
+        for r in cursor.fetchall():
+            return r[0]
+
+    Computer_expenses_sum = exp()
+
+
+    # #monthly fees
+    #
+    def mf_data():
+        cursor.execute("select month,sum(month_fees) as month_fees from shikshalaya_computer_app_computer_student_monthly_fees where month = '"+month+"' group by month")
+
+        data = cursor.fetchall()
+        for r in data:
+            return r[1]
+    Computer_monthly_fees_sum = mf_data()
+
+    #
+    def mf_all():
+        mf_all = []
+        cursor.execute("select month,sum(month_fees) as month_fees from shikshalaya_computer_app_computer_student_monthly_fees  group by month")
+
+        data = cursor.fetchall()
+        for r in data:
+            mf_all.append([r[0],r[1],1])
+        return mf_all
+
+    Computer_monthly_fees_chart = mf_all()
+
+    def ex_all():
+        ex_all = []
+        cursor.execute('select month,sum("Amount") as month_expenses from shikshalaya_computer_app_computer_expenses  group by month')
+
+        data = cursor.fetchall()
+        for r in data:
+            ex_all.append([r[0],r[1]])
+        return ex_all
+
+    Computer_monthly_expenses_chart = ex_all()
+
     content = {
             'student_count':student_count,
-            'computer_student_count':computer_student_count
+            'computer_student_count':computer_student_count,
+            'Computer_expenses_sum' : Computer_expenses_sum,
+            'month':month,
+            'Computer_monthly_fees_sum':Computer_monthly_fees_sum,
+            'Computer_monthly_fees_chart':Computer_monthly_fees_chart,
+            'Computer_monthly_expenses_chart':Computer_monthly_expenses_chart
         }
     return render(request,'Hod/Home.html',content)
+
+
 
 @login_required(login_url='/')
 def ADD_STUDENT(request):
@@ -458,14 +524,7 @@ def ADD_COMPUTER_STUDENT(request):
 @login_required(login_url='/')
 def VIEW_COMPUTER_STUDENT(request):
     student = Computer_Student.objects.all()
-    conn = sqlite3.connect(r'db.sqlite3')
-    # conn = psycopg2.connect(
-    #     host="ec2-54-152-28-9.compute-1.amazonaws.com",
-    #     database="dembhfve0a83tr",
-    #     user="jcnsowkypgbkok",
-    #     password="fd8280d92c06d4116cce5ba3c201ba9dd97869e3a72dc3247918ea93bd5d6db1")
-    cursor = conn.cursor()
-    cursor.execute('select "Student_id", sum(month_fees) as sum_month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by "Student_id" ')
+    cursor.execute('select "Student_id", sum(month_fees) as sum_month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by Student_id ')
     data_result_mf = []
     for r in cursor.fetchall():
         data_result_mf.append([int(r[0]), r[1]])
@@ -682,7 +741,7 @@ def COMPUTER_EXPENSES_ADD(request):
     context = {
         'expenses':expenses
     }
-    return render(request, 'Hod/computer_expenses_add.html',context)
+    return render(request, 'Hod/Computer_expenses_add.html',context)
 
 @login_required(login_url='/')
 def COMPUTER_EXPENSES_VIEW(request):
@@ -701,53 +760,25 @@ def COMPUTER_EXPENSES_DELETE(request,id):
 
 @login_required(login_url='/')
 def COMPUTER_SALLARY(request):
-    conn = sqlite3.connect(r"db.sqlite3")
-    # conn = psycopg2.connect(
-    #     host="ec2-54-152-28-9.compute-1.amazonaws.com",
-    #     database="dembhfve0a83tr",
-    #     user="jcnsowkypgbkok",
-    #     password="fd8280d92c06d4116cce5ba3c201ba9dd97869e3a72dc3247918ea93bd5d6db1")
-    cursor = conn.cursor()
-
-    cursor.execute(
-        "select month,sum(registration_fees) as registration_fees  from shikshalaya_computer_app_computer_student group by month")
-
-    regl = []
-    for reg in cursor.fetchall():
-        regl.append(reg)
-    print(regl)
-
-    cursor.execute(
-        "select month,sum(month_fees) as month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by month ")
-
-    mfeesl = []
-    for mfees in cursor.fetchall():
-        mfeesl.append(mfees)
-    print(mfeesl)
-
-    cursor.execute(
-        'select month,sum("Amount") as amount from shikshalaya_computer_app_computer_expenses group by month')
-
-    expl = []
-    for exp in cursor.fetchall():
-        expl.append(exp)
-    print(expl)
-
-    for regl1 in regl:
-        for mfeesl1 in mfeesl:
-            for expl1 in expl:
-                if regl1[0] == mfeesl1[0] == expl1[0]:
-                    context = {
-                        'month':regl1[0],
-                        'regestraionfees': str(regl1[1]),
-                        'monthfees': str(mfeesl1[1]),
-                        'expenses':str(expl1[1]),
-                        'regfeesshare':str(int(regl1[1])/2),
-                        'expshare':str(int(expl1[1])/2),
-                        'employee': str((int(mfeesl1[1]) * 55) / 100),
-                        # 'rupamsubho': str((int(mfeesl1[1]) * 45) / 100),
-                        'rupamsubhofinal':str(round((int(mfeesl1[1])*45)/100+int(regl1[1])/2-int(expl1[1])/2,1))
-                    }
-                    print(context)
-
-                    return render(request, 'Hod/shareview.html', context)
+    df = pd.read_sql_query(
+        "select mf.month ,sum(mf.month_fees) as month_fees ,sum(cs.registration_fees) as registration_fees from shikshalaya_computer_app_computer_student_monthly_fees as mf inner join shikshalaya_computer_app_computer_student as cs on mf.month = cs.month group by mf.month, cs.month",
+        conn)
+    #
+    ce = pd.read_sql_query('select month,sum("Amount") as expenses_amount from shikshalaya_computer_app_computer_expenses group by month',conn)
+    fnl = df.merge(ce,how = 'inner',on='month')
+    fnl['registration_fees_share'] = fnl['registration_fees']/2
+    fnl['expenses_share'] = fnl['expenses_amount']/2
+    fnl['employee_share'] = (fnl['month_fees']*55)/100
+    fnl['rupam_subhajit_share'] = (fnl['month_fees']*55)/100 + fnl['registration_fees_share'] - fnl['expenses_share']
+    fnl = round(fnl,1)
+    for ms in fnl.itertuples():
+            context = {
+                    'month': ms[1],
+                    'monthfees': str(ms[2]),
+                    'regestraionfees': str(ms[3]),
+                    'expenses': str(ms[4]),
+                    'regfeesshare': str(ms[5]),
+                    'expshare': str(ms[6]),
+                    'employee': str(ms[7]),
+                    'rupamsubhofinal': str(ms[8])}
+            return render(request, 'Hod/shareview.html', context)

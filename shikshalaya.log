@@ -3234,3 +3234,102 @@ INFO  2022-08-05 13:17:09,854 E:\OneDrive - student.amity.edu\office\python & R\
 >>>>>>> origin/main
 INFO  2022-08-11 15:56:43,244 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
 INFO  2022-08-11 15:56:48,989 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 16:00:02,358 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 16:03:20,937 E:\python\shikshalaya_web\student_management_system\settings.py changed, reloading.
+INFO  2022-08-11 16:05:13,732 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 16:05:32,820 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 16:05:52,894 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 16:06:16,106 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 16:06:22,376 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 39, in HOME
+    Computer_expenses_sum = exp()
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 34, in exp
+    cursor.execute(q1)
+psycopg2.errors.UndefinedColumn: column "amount" does not exist
+LINE 1: SELECT sum(Amount) FROM shikshalaya_computer_app_computer_ex...
+                   ^
+HINT:  Perhaps you meant to reference the column "shikshalaya_computer_app_computer_expenses.Amount".
+
+INFO  2022-08-11 16:06:56,505 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 16:07:03,363 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 16:07:07,634 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 38, in HOME
+    Computer_expenses_sum = exp()
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 33, in exp
+    cursor.execute(q1)
+psycopg2.errors.UndefinedColumn: column "amount" does not exist
+LINE 1: SELECT sum(Amount) FROM shikshalaya_computer_app_computer_ex...
+                   ^
+HINT:  Perhaps you meant to reference the column "shikshalaya_computer_app_computer_expenses.Amount".
+
+ERROR  2022-08-11 16:07:10,861 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 38, in HOME
+    Computer_expenses_sum = exp()
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 33, in exp
+    cursor.execute(q1)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+ERROR  2022-08-11 16:07:12,011 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 38, in HOME
+    Computer_expenses_sum = exp()
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 33, in exp
+    cursor.execute(q1)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+INFO  2022-08-11 16:07:38,570 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 16:09:31,534 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 16:09:35,261 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 16:09:45,458 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 16:11:19,839 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 16:11:31,211 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 16:11:41,335 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 16:11:56,584 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 16:12:00,480 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 16:12:05,015 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 72, in HOME
+    Computer_monthly_expenses_chart = ex_all()
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 65, in ex_all
+    cursor.execute("select month,sum(Amount) as month_expenses from shikshalaya_computer_app_computer_expenses  group by month")
+psycopg2.errors.UndefinedColumn: column "amount" does not exist
+LINE 1: select month,sum(Amount) as month_expenses from shikshalaya_...
+                         ^
+HINT:  Perhaps you meant to reference the column "shikshalaya_computer_app_computer_expenses.Amount".
+
+INFO  2022-08-11 16:12:39,856 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 16:12:51,820 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 16:13:11,398 E:\python\shikshalaya_web\student_management_system\settings.py changed, reloading.

@@ -36,10 +36,11 @@ cursor = conn.cursor()
 mydate = datetime.datetime.now()
 month = mydate.strftime("%B")
 def exp():
-        cursor.execute("select month,sum(month_fees) as month_fees from shikshalaya_computer_app_computer_student_monthly_fees where month = '"+month+"' group by month")
+        q1 ='Select month,sum(Amount) as month_expenses from shikshalaya_computer_app_computer_expenses  group by month'
+        cursor.execute(q1)
 
         for r in cursor.fetchall():
-                return r[1]
+                return r[0]
 
 
 print(exp())
