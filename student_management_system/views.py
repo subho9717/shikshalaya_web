@@ -20,11 +20,12 @@ def LOGIN(request):
 
 def doLogin(request):
     if request.method == 'POST':
+        print('ok')
         user = EmailBackEnd.authenticate(request,username = request.POST.get('email'),password = request.POST.get('password'))
         print(user)
         if user!=None:
             login(request,user)
-            logging.info(user , "is logged in")
+            # logging.info(user , "is logged in")
             user_type = user.user_type
             if user_type == '1':
                 return  redirect('hod_home')

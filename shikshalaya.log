@@ -1257,3 +1257,1971 @@ Traceback (most recent call last):
   File "E:\OneDrive - student.amity.edu\office\python & R\Shikshalaya\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
     raise ValueError(
 ValueError: The view student_management_system.Hod_views.COMPUTER_SALLARY didn't return an HttpResponse object. It returned None instead.
+INFO  2022-08-11 12:21:48,106 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 12:36:01,981 E:\python\shikshalaya_web\student_management_system\settings.py changed, reloading.
+INFO  2022-08-11 12:36:30,417 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 12:36:41,069 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 12:37:05,539 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 39, in HOME
+    Computer_expenses_sum = exp()
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 34, in exp
+    cursor.execute(q1)
+psycopg2.errors.UndefinedColumn: column "amount" does not exist
+LINE 1: SELECT sum(Amount) FROM shikshalaya_computer_app_computer_ex...
+                   ^
+HINT:  Perhaps you meant to reference the column "shikshalaya_computer_app_computer_expenses.Amount".
+
+WARNING  2022-08-11 12:37:05,967 Not Found: /favicon.ico
+ERROR  2022-08-11 12:37:22,845 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 39, in HOME
+    Computer_expenses_sum = exp()
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 34, in exp
+    cursor.execute(q1)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+ERROR  2022-08-11 12:38:45,952 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 39, in HOME
+    Computer_expenses_sum = exp()
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 34, in exp
+    cursor.execute(q1)
+psycopg2.errors.UndefinedColumn: column "amount" does not exist
+LINE 1: SELECT sum(Amount) FROM shikshalaya_computer_app_computer_ex...
+                   ^
+HINT:  Perhaps you meant to reference the column "shikshalaya_computer_app_computer_expenses.Amount".
+
+INFO  2022-08-11 12:40:23,489 E:\python\shikshalaya_web\student_management_system\views.py changed, reloading.
+WARNING  2022-08-11 12:40:28,015 Forbidden (CSRF token from POST incorrect.): /doLogin/
+ERROR  2022-08-11 12:40:43,661 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 39, in HOME
+    Computer_expenses_sum = exp()
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 34, in exp
+    cursor.execute(q1)
+psycopg2.errors.UndefinedColumn: column "amount" does not exist
+LINE 1: SELECT sum(Amount) FROM shikshalaya_computer_app_computer_ex...
+                   ^
+HINT:  Perhaps you meant to reference the column "shikshalaya_computer_app_computer_expenses.Amount".
+
+ERROR  2022-08-11 12:41:34,878 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 39, in HOME
+    Computer_expenses_sum = exp()
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 34, in exp
+    cursor.execute(q1)
+psycopg2.errors.UndefinedColumn: column "amount" does not exist
+LINE 1: SELECT sum(Amount) FROM shikshalaya_computer_app_computer_ex...
+                   ^
+HINT:  Perhaps you meant to reference the column "shikshalaya_computer_app_computer_expenses.Amount".
+
+INFO  2022-08-11 12:43:22,210 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 12:46:12,907 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 12:46:16,675 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 12:46:22,329 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 39, in HOME
+    Computer_expenses_sum = exp()
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 34, in exp
+    cursor.execute(q1)
+psycopg2.errors.UndefinedColumn: column "amount" does not exist
+LINE 1: SELECT sum(Amount) FROM shikshalaya_computer_app_computer_ex...
+                   ^
+HINT:  Perhaps you meant to reference the column "shikshalaya_computer_app_computer_expenses.Amount".
+
+WARNING  2022-08-11 12:46:25,344 Forbidden (CSRF token from POST incorrect.): /doLogin/
+INFO  2022-08-11 12:46:57,314 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 12:47:42,011 E:\python\shikshalaya_web\student_management_system\views.py changed, reloading.
+ERROR  2022-08-11 12:55:27,957 Internal Server Error: /Hod/Computer/Student/View
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 536, in VIEW_COMPUTER_STUDENT
+    cursor.execute('select Student_id, sum(month_fees) as sum_month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by Student_id ')
+psycopg2.errors.UndefinedColumn: column "student_id" does not exist
+LINE 1: select Student_id, sum(month_fees) as sum_month_fees from sh...
+               ^
+HINT:  Perhaps you meant to reference the column "shikshalaya_computer_app_computer_student_monthly_fees.Student_id".
+
+ERROR  2022-08-11 12:55:44,233 Internal Server Error: /Hod/Computer/Student/View
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 536, in VIEW_COMPUTER_STUDENT
+    cursor.execute('select Student_id, sum(month_fees) as sum_month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by Student_id ')
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+ERROR  2022-08-11 12:56:52,371 Internal Server Error: /Hod/Computer/Student/View
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 536, in VIEW_COMPUTER_STUDENT
+    cursor.execute('select Student_id, sum(month_fees) as sum_month_fees from shikshalaya_computer_app_computer_student_monthly_fees group by Student_id ')
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+INFO  2022-08-11 12:57:52,722 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 12:59:22,525 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 12:59:41,246 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 13:04:26,590 Internal Server Error: /Hod/Computer/Sallary
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 789, in COMPUTER_SALLARY
+    cursor.execute('select mf.month,\
+psycopg2.errors.SyntaxError: syntax error at or near "group"
+LINE 1: ...pp_computer_expenses as ce on mf.month = cs.month group    b...
+                                                             ^
+
+ERROR  2022-08-11 13:11:30,033 Internal Server Error: /Hod/Computer/Expanses/view
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    if test_func(request.user):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 51, in <lambda>
+    lambda u: u.is_authenticated,
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\functional.py", line 258, in inner
+    self._setup()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\functional.py", line 398, in _setup
+    self._wrapped = self._setupfunc()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+ERROR  2022-08-11 13:13:20,159 Internal Server Error: /Hod/Computer/Student/Fees_Add/View
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    if test_func(request.user):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 51, in <lambda>
+    lambda u: u.is_authenticated,
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\functional.py", line 258, in inner
+    self._setup()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\functional.py", line 398, in _setup
+    self._wrapped = self._setupfunc()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+ERROR  2022-08-11 13:16:04,355 Internal Server Error: /Hod/Computer/Expanses/view
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    if test_func(request.user):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 51, in <lambda>
+    lambda u: u.is_authenticated,
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\functional.py", line 258, in inner
+    self._setup()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\functional.py", line 398, in _setup
+    self._wrapped = self._setupfunc()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+ERROR  2022-08-11 13:16:06,945 Internal Server Error: /Hod/Computer/Expanses/view
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    if test_func(request.user):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 51, in <lambda>
+    lambda u: u.is_authenticated,
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\functional.py", line 258, in inner
+    self._setup()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\functional.py", line 398, in _setup
+    self._wrapped = self._setupfunc()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+ERROR  2022-08-11 13:16:09,907 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    if test_func(request.user):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 51, in <lambda>
+    lambda u: u.is_authenticated,
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\functional.py", line 258, in inner
+    self._setup()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\functional.py", line 398, in _setup
+    self._wrapped = self._setupfunc()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+ERROR  2022-08-11 13:16:49,101 Internal Server Error: /doLogin/
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\views.py", line 23, in doLogin
+    user = EmailBackEnd.authenticate(request,username = request.POST.get('email'),password = request.POST.get('password'))
+  File "E:\python\shikshalaya_web\shikshalaya_computer_app\EmailBackEnd.py", line 9, in authenticate
+    user = UserModel.objects.get(email=username)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+ERROR  2022-08-11 13:17:19,105 Internal Server Error: /doLogin/
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\views.py", line 23, in doLogin
+    user = EmailBackEnd.authenticate(request,username = request.POST.get('email'),password = request.POST.get('password'))
+  File "E:\python\shikshalaya_web\shikshalaya_computer_app\EmailBackEnd.py", line 9, in authenticate
+    user = UserModel.objects.get(email=username)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+INFO  2022-08-11 13:17:54,997 E:\python\shikshalaya_web\student_management_system\views.py changed, reloading.
+ERROR  2022-08-11 13:18:12,856 Internal Server Error: /doLogin/
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\views.py", line 23, in doLogin
+    user = EmailBackEnd.authenticate(request,username = request.POST.get('email'),password = request.POST.get('password'))
+  File "E:\python\shikshalaya_web\shikshalaya_computer_app\EmailBackEnd.py", line 9, in authenticate
+    user = UserModel.objects.get(email=username)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+ERROR  2022-08-11 13:19:17,265 Internal Server Error: /doLogin/
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\views.py", line 23, in doLogin
+    user = EmailBackEnd.authenticate(request,username = request.POST.get('email'),password = request.POST.get('password'))
+  File "E:\python\shikshalaya_web\shikshalaya_computer_app\EmailBackEnd.py", line 9, in authenticate
+    user = UserModel.objects.get(email=username)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+ERROR  2022-08-11 13:19:41,664 Internal Server Error: /doLogin/
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\views.py", line 23, in doLogin
+    user = EmailBackEnd.authenticate(request,username = request.POST.get('email'),password = request.POST.get('password'))
+  File "E:\python\shikshalaya_web\shikshalaya_computer_app\EmailBackEnd.py", line 9, in authenticate
+    user = UserModel.objects.get(email=username)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+ERROR  2022-08-11 13:20:02,658 Internal Server Error: /doLogin/
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\views.py", line 23, in doLogin
+    user = EmailBackEnd.authenticate(request,username = request.POST.get('email'),password = request.POST.get('password'))
+  File "E:\python\shikshalaya_web\shikshalaya_computer_app\EmailBackEnd.py", line 9, in authenticate
+    user = UserModel.objects.get(email=username)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+WARNING  2022-08-11 13:21:03,744 Not Found: /static/assets/plugins/bootstrap/css/bootstrap.min.css.map
+ERROR  2022-08-11 13:21:07,659 Internal Server Error: /doLogin/
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\views.py", line 23, in doLogin
+    user = EmailBackEnd.authenticate(request,username = request.POST.get('email'),password = request.POST.get('password'))
+  File "E:\python\shikshalaya_web\shikshalaya_computer_app\EmailBackEnd.py", line 9, in authenticate
+    user = UserModel.objects.get(email=username)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+INFO  2022-08-11 13:22:01,160 E:\python\shikshalaya_web\student_management_system\views.py changed, reloading.
+INFO  2022-08-11 13:22:04,749 E:\python\shikshalaya_web\student_management_system\views.py changed, reloading.
+ERROR  2022-08-11 13:22:09,538 Internal Server Error: /doLogin/
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\views.py", line 24, in doLogin
+    user = EmailBackEnd.authenticate(request,username = request.POST.get('email'),password = request.POST.get('password'))
+  File "E:\python\shikshalaya_web\shikshalaya_computer_app\EmailBackEnd.py", line 9, in authenticate
+    user = UserModel.objects.get(email=username)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+ERROR  2022-08-11 13:23:07,393 Internal Server Error: /doLogin/
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\views.py", line 24, in doLogin
+    user = EmailBackEnd.authenticate(request,username = request.POST.get('email'),password = request.POST.get('password'))
+  File "E:\python\shikshalaya_web\shikshalaya_computer_app\EmailBackEnd.py", line 9, in authenticate
+    user = UserModel.objects.get(email=username)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+ERROR  2022-08-11 13:25:26,235 Internal Server Error: /Hod/Computer/Sallary
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 789, in COMPUTER_SALLARY
+    cursor.execute('select mf.month,\
+psycopg2.errors.SyntaxError: syntax error at or near "group"
+LINE 1: ...pp_computer_expenses as ce on mf.month = cs.month group    b...
+                                                             ^
+
+INFO  2022-08-11 13:53:30,189 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 14:18:32,632 Internal Server Error: /doLogin/
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\views.py", line 24, in doLogin
+    user = EmailBackEnd.authenticate(request,username = request.POST.get('email'),password = request.POST.get('password'))
+  File "E:\python\shikshalaya_web\shikshalaya_computer_app\EmailBackEnd.py", line 9, in authenticate
+    user = UserModel.objects.get(email=username)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+WARNING  2022-08-11 14:18:36,842 Not Found: /favicon.ico
+ERROR  2022-08-11 14:19:00,366 Internal Server Error: /Hod/Computer/Sallary
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 814, in COMPUTER_SALLARY
+    return render(request, 'Hod/shareview.html', context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\defaulttags.py", line 193, in render
+    values = list(values)
+TypeError: 'int' object is not iterable
+ERROR  2022-08-11 14:19:23,956 Internal Server Error: /Hod/Computer/Sallary
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 814, in COMPUTER_SALLARY
+    return render(request, 'Hod/shareview.html', context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\defaulttags.py", line 193, in render
+    values = list(values)
+TypeError: 'int' object is not iterable
+INFO  2022-08-11 14:19:52,361 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 14:20:17,228 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 14:20:31,250 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 14:20:36,612 Internal Server Error: /Hod/Computer/Sallary
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 815, in COMPUTER_SALLARY
+    return render(request, 'Hod/shareview.html',context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\defaulttags.py", line 193, in render
+    values = list(values)
+TypeError: 'int' object is not iterable
+ERROR  2022-08-11 14:20:46,501 Internal Server Error: /Hod/Computer/Sallary
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 815, in COMPUTER_SALLARY
+    return render(request, 'Hod/shareview.html',context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\defaulttags.py", line 193, in render
+    values = list(values)
+TypeError: 'int' object is not iterable
+INFO  2022-08-11 14:21:34,271 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 14:21:38,440 Internal Server Error: /Hod/Computer/Sallary
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 815, in COMPUTER_SALLARY
+    return render(request, 'Hod/shareview.html',context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\template\defaulttags.py", line 193, in render
+    values = list(values)
+TypeError: 'int' object is not iterable
+INFO  2022-08-11 14:22:24,994 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 14:25:01,876 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 14:25:27,718 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 14:28:02,546 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 14:28:38,137 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 14:28:43,080 Internal Server Error: /Hod/Computer/Sallary
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 815, in COMPUTER_SALLARY
+    print(context[1])
+KeyError: 1
+INFO  2022-08-11 14:28:55,802 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 14:29:58,050 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 14:30:08,409 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 14:30:16,558 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 14:31:11,719 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 14:31:32,100 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 40, in HOME
+    Computer_expenses_sum = exp()
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 35, in exp
+    cursor.execute(q1)
+psycopg2.errors.UndefinedColumn: column "amount" does not exist
+LINE 1: SELECT sum(Amount) FROM shikshalaya_computer_app_computer_ex...
+                   ^
+HINT:  Perhaps you meant to reference the column "shikshalaya_computer_app_computer_expenses.Amount".
+
+INFO  2022-08-11 14:31:44,925 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 14:32:11,231 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 14:32:17,014 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 40, in HOME
+    Computer_expenses_sum = exp()
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 35, in exp
+    cursor.execute(q1)
+psycopg2.errors.SyntaxError: syntax error at or near "group"
+LINE 1: ...puter_app_computer_expenses where month = +month+ group by m...
+                                                             ^
+
+INFO  2022-08-11 14:32:39,210 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 14:32:47,237 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 40, in HOME
+    Computer_expenses_sum = exp()
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 35, in exp
+    cursor.execute(q1)
+psycopg2.errors.AmbiguousFunction: function sum(unknown) is not unique
+LINE 1: SELECT sum('Amount') FROM shikshalaya_computer_app_computer_...
+               ^
+HINT:  Could not choose a best candidate function. You might need to add explicit type casts.
+
+INFO  2022-08-11 14:33:08,116 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 14:33:12,769 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 39, in HOME
+    print(exp())
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 35, in exp
+    cursor.execute(q1)
+psycopg2.errors.AmbiguousFunction: function sum(unknown) is not unique
+LINE 1: SELECT sum('Amount') FROM shikshalaya_computer_app_computer_...
+               ^
+HINT:  Could not choose a best candidate function. You might need to add explicit type casts.
+
+ERROR  2022-08-11 14:33:20,213 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 39, in HOME
+    print(exp())
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 35, in exp
+    cursor.execute(q1)
+psycopg2.errors.InFailedSqlTransaction: current transaction is aborted, commands ignored until end of transaction block
+
+INFO  2022-08-11 14:35:26,315 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 14:35:29,686 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    if test_func(request.user):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 51, in <lambda>
+    lambda u: u.is_authenticated,
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\functional.py", line 258, in inner
+    self._setup()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\functional.py", line 398, in _setup
+    self._wrapped = self._setupfunc()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+INFO  2022-08-11 14:36:02,537 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 14:36:05,865 Internal Server Error: /Hod/Computer/Sallary
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    if test_func(request.user):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 51, in <lambda>
+    lambda u: u.is_authenticated,
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\functional.py", line 258, in inner
+    self._setup()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\functional.py", line 398, in _setup
+    self._wrapped = self._setupfunc()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+ERROR  2022-08-11 14:36:07,434 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    if test_func(request.user):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 51, in <lambda>
+    lambda u: u.is_authenticated,
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\functional.py", line 258, in inner
+    self._setup()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\functional.py", line 398, in _setup
+    self._wrapped = self._setupfunc()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\backends\postgresql\base.py", line 203, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: connection to server at "satao.db.elephantsql.com" (34.92.135.43), port 5432 failed: FATAL:  too many connections for role "bhkpnqch"
+
+INFO  2022-08-11 15:46:39,001 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 15:47:18,804 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 15:47:34,302 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 15:48:16,642 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 15:48:54,849 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 15:49:26,870 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 15:49:40,418 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 15:49:50,689 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 15:49:55,760 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-08-11 15:50:04,248 Internal Server Error: /Hod/Home
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 73, in HOME
+    Computer_monthly_expenses_chart = ex_all()
+  File "E:\python\shikshalaya_web\student_management_system\Hod_views.py", line 66, in ex_all
+    cursor.execute("select month,sum(Amount) as month_expenses from shikshalaya_computer_app_computer_expenses  group by month")
+psycopg2.errors.UndefinedColumn: column "amount" does not exist
+LINE 1: select month,sum(Amount) as month_expenses from shikshalaya_...
+                         ^
+HINT:  Perhaps you meant to reference the column "shikshalaya_computer_app_computer_expenses.Amount".
+
+WARNING  2022-08-11 15:50:04,373 Not Found: /favicon.ico
+INFO  2022-08-11 15:50:23,722 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+INFO  2022-08-11 15:50:30,595 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
