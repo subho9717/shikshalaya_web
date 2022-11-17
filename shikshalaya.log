@@ -3334,3 +3334,40 @@ INFO  2022-08-11 16:12:39,856 E:\python\shikshalaya_web\student_management_syste
 INFO  2022-08-11 16:12:51,820 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
 INFO  2022-08-11 16:13:11,398 E:\python\shikshalaya_web\student_management_system\settings.py changed, reloading.
 INFO  2022-08-11 16:14:22,733 E:\python\shikshalaya_web\student_management_system\settings.py changed, reloading.
+INFO  2022-11-17 16:55:31,697 E:\python\shikshalaya_web\student_management_system\Hod_views.py changed, reloading.
+ERROR  2022-11-17 17:10:14,308 Internal Server Error: /doLogin/
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\views.py", line 24, in doLogin
+    user = EmailBackEnd.authenticate(request,username = request.POST.get('email'),password = request.POST.get('password'))
+  File "E:\python\shikshalaya_web\shikshalaya_computer_app\EmailBackEnd.py", line 9, in authenticate
+    user = UserModel.objects.get(email=username)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 499, in get
+    raise self.model.MultipleObjectsReturned(
+shikshalaya_computer_app.models.CustomUser.MultipleObjectsReturned: get() returned more than one CustomUser -- it returned 2!
+ERROR  2022-11-17 17:10:41,203 Internal Server Error: /doLogin/
+Traceback (most recent call last):
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\python\shikshalaya_web\student_management_system\views.py", line 24, in doLogin
+    user = EmailBackEnd.authenticate(request,username = request.POST.get('email'),password = request.POST.get('password'))
+  File "E:\python\shikshalaya_web\shikshalaya_computer_app\EmailBackEnd.py", line 9, in authenticate
+    user = UserModel.objects.get(email=username)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\python\shikshalaya_web\venv\lib\site-packages\django\db\models\query.py", line 499, in get
+    raise self.model.MultipleObjectsReturned(
+shikshalaya_computer_app.models.CustomUser.MultipleObjectsReturned: get() returned more than one CustomUser -- it returned 2!
+WARNING  2022-11-17 17:15:00,365 Not Found: /static/assets/plugins/bootstrap/css/bootstrap.min.css.map
+WARNING  2022-11-17 17:15:00,442 Not Found: /static/assets/js/popper.min.js.map
+WARNING  2022-11-17 17:15:00,443 Not Found: /static/assets/plugins/bootstrap/js/bootstrap.min.js.map
+WARNING  2022-11-17 17:15:14,690 Not Found: /static/assets/plugins/bootstrap/css/bootstrap.min.css.map
+WARNING  2022-11-17 17:15:19,236 Not Found: /static/assets/js/popper.min.js.map
+WARNING  2022-11-17 17:15:19,272 Not Found: /static/assets/plugins/bootstrap/js/bootstrap.min.js.map
